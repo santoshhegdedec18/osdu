@@ -26,7 +26,9 @@ well_log_file.close()
 
 #Load Ontology .owl file through file URI, the method can also create a new file if not exists already
 #Create base class to connect all WELL objects using owlready package
-osdu_onto = get_ontology("file:///D:/OSDU/Ontology/odsu_onto3.owl" )
+uri = "file:///D:/OSDU/Ontology/dynamiconto.owl" 
+uri = uri.encode()
+osdu_onto = get_ontology(uri)
 baseclass = types.new_class("WELLS",(Thing,),kwds=None)
 osdu_onto.add(baseclass)
 
@@ -114,7 +116,7 @@ create_well_class()
 create_wellbore_class()
 create_well_log_class()
 
-osdu_onto.save('D:/OSDU/Ontology/odsu_onto3.owl')
+osdu_onto.save('D:/OSDU/Ontology/dynamiconto.owl')
 
 
 

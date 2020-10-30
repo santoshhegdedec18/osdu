@@ -41,7 +41,7 @@ def create_constraint(tx):
     
 def import_ontology(tx):
     #import Ontology using neosemantics plugin
-    result = tx.run("CALL n10s.rdf.import.fetch('file:///home/osdugraph/datashare/ss.owl','Turtle')")
+    result = tx.run("CALL n10s.rdf.import.fetch('file:///home/osdugraph/datashare/dynamiconto.owl','Turtle')")
     print("Imported the Ontology...........\n")
     for record in result:
        print(record)
