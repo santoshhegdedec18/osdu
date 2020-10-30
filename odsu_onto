@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+]>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#" xml:base="file:///D:/OSDU/Ontology/osdu_onto.owl" ontologyIRI="file:///D:/OSDU/Ontology/osdu_onto.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+>
+<Prefix name="" IRI="file:///D:/OSDU/Ontology/osdu_onto.owl"/>
+<Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+<Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+<Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+<Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+<Prefix name="osdu_onto" IRI="file:///D:/OSDU/Ontology/osdu_onto.owl"/>
+
+
+</Ontology>
