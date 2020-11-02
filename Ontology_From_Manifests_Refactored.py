@@ -26,8 +26,9 @@ well_log_file.close()
 
 #Load Ontology .owl file through file URI, the method can also create a new file if not exists already
 #Create base class to connect all WELL objects using owlready package
-uri = "file:///D:/OSDU/Ontology/dynamiconto.owl" 
-uri = uri.encode()
+uri = "http:\\ontologu.osdu.com\dynamiconto.owl" 
+uri = uri.encode().decode()
+print(uri)
 osdu_onto = get_ontology(uri)
 baseclass = types.new_class("WELLS",(Thing,),kwds=None)
 osdu_onto.add(baseclass)
