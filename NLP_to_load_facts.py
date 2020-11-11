@@ -51,7 +51,11 @@ def get_entities_from_NLP(uri):
     key:"9f5b2b36a83c4022ae27fa5ada424468", 
     url:"https://osdu-cognitive-service.cognitiveservices.azure.com/", 
     nodeProperty: 'body'} ) yield value 
-    UNWIND value.entities AS entity RETURN entity'''
+    UNWIND value.entities AS entity 
+    WITH a, entity.name AS entity, collect(entity.type) AS types
+    MERGE (e:Entity {name: entity})
+    SET e.type = types
+    MERGE (a)-[:ENTITY]->(e)'''
     print (query)
     graph_creator(query)
 
