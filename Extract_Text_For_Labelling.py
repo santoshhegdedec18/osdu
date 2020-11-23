@@ -15,7 +15,7 @@ textfilepath = r"D:\OSDU\Unstructured_Data\text_files_extracted_from_pdf"
 def load_pdf_document():
     text =''
     count = 0
-    source = r"D:\OSDU\Unstructured_Data\prov22.pdf"
+    source = r"D:\OSDU\Unstructured_Data\prov33.pdf"
     with open(source, "rb") as f:
         # creating a pdf reader object 
         pdfReader = PyPDF2.PdfFileReader(f)
@@ -41,4 +41,4 @@ def extract_sentences_and_create_text_file(pdffilepath):
     MyFile.close()
     
     
-extract_sentences_and_create_text_file(r"D:\OSDU\Unstructured_Data\prov22.pdf")
+extract_sentences_and_create_text_file(r"D:\OSDU\Unstructured_Data\prov33.pdf")

@@ -40,7 +40,7 @@ def extract_relations(doc):
             for child in prep.children:
                 triples.append((ent.text, "{} {}".format(ent.root.head, prep), child.text))              
     return triples
-pdf_content = get_pdf_content('D:/OSDU/Well_Log_Reports/WL_RAW_PROD_CCL-PERF_2013-12-22_PLOT_1.pdf')
+pdf_content = get_pdf_content(r'D:\OSDU\Unstructured_Data\prov22.pdf')
 content_from_nlp = nlp(pdf_content)
 sentences = list (content_from_nlp.sents)
 

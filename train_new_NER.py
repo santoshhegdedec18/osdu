@@ -58,9 +58,9 @@ def train_new_NER(model=None, output_dir=model_dir, n_iter=100):
             batches = minibatch(TRAIN_DATA, size=compounding(4.0, 32.0, 1.001))
             for batch in batches:
                 texts, annotations = zip(*batch)
-                logger = ML_Training_Data_Logging.LogManager("batch_data", batch )
-                logger.log_data()
-                '''
+                #logger = ML_Training_Data_Logging.LogManager("batch_data", batch )
+                #logger.log_data()
+                
                 try:
                     
                     nlp.update(
@@ -71,7 +71,7 @@ def train_new_NER(model=None, output_dir=model_dir, n_iter=100):
                         losses=losses,
                     ) 
                 except Exception as error:
-                    print(error)'''
+                    print(error)
                     #continue
             '''for text, annotations in TRAIN_DATA:
                 nlp.update(

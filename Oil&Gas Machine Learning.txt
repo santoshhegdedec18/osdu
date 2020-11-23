@@ -1,0 +1,30 @@
+https://viewpoints.io/entry/applying-machine-learning-for-accurate-timely-oil-and-gas-production-foreca
+Applying Machine Learning for Accurate, Timely Oil and Gas Production Forecasting:
+
+Oil & gas companies put a lot of investment into exploring and extracting resources from wells, so when they can achieve more accurate forecasting, it helps with cash flow, net present value (NPV) and internal rate of return (IRR) calculations.
+
+What is important for future production forecast?
+Multi-variate analysis and interpretation of Reservoir Behavior is fundamental
+
+What are the challenges here?
+1) The challenge is that well productivity is heavily affected by completion characteristics
+2) yet the physics of well fluid flow are often unclear, making it difficult to predict production and estimate the ultimate recovery in reservoirs
+3) It’s also very time consuming to investigate and analyze production rates of existing wells across the reservoir, leaving production engineers with less time to focus on meaningful what-if scenarios around well performance.
+
+The Challenge with Traditional Decline Curve Analysis (DCA):
+
+1) Due to the uncertain nature of the deterministic methodology, the simplistic sampling techniques used, and the complex nature of data, many upstream companies do not fully understand the integrity the wells they manage
+2)  It can also take weeks or months to establish and model alternative scenarios
+3) To make matters worse, the number of wells each reservoir engineer must analyze is growing, which delays timely estimated ultimate recovery (EUR) calculations that help identify candidates for stimulation or shut-in
+4) As a result, exploration and production (E&P) companies miss many opportunities to capitalize on real-time market conditions
+
+Hot to fix DCA Inefficiency with Machine Learning?
+E&P already Collected data for these operational parameters,
+1) Production History
+2) REservoir Geology
+3) COmpletion Designs
+4) Pressure History 
+By using machine learning to automate the entire modeling and forecasting process, reservoir engineering teams can integrate day-to-day field conditions, real-time data from production facilities, and field operational constraints – like offset frac – to conduct what-if scenarios that affect production forecasting. With machine learning, the models can consider a larger and more diverse input dataset, making the decline curve analysis process more accurate and realistic.
+
+Benefits of Machine Learning:
+Insights from this process can benefit operations teams as well. In unconventional shale oil production, operations teams are usually in charge of maintaining and running field equipment to produce wells, and typically rely on reservoir and production teams to advise them on artificial lift strategies for single well or multi-well production optimization. The automated workflows enabled by machine learning act as a connected highway that enables the seamless exchange of insights between various teams. This innately breaks down silos and fosters innovative growth in the organization.

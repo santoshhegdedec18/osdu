@@ -11,9 +11,9 @@ model_dir = 'D:/OSDU/AI Models'
 nlp=spacy.load(model_dir)
 
 def load_text_document():
-       source = r"D:\OSDU\Unstructured_Data\text_files_extracted_from_pdf\prov22.txt"
+       source = r"D:\OSDU\Unstructured_Data\text_files_extracted_from_pdf\prov33.txt"
        text = open(source, "r",  encoding='utf-8').read()
-       
+       #print (text)
        return text
     
 doc = nlp(load_text_document())
