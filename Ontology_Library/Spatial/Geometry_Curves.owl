@@ -1,0 +1,2960 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://linked.data.gov.au/def/geofeatures#"
+     xml:base="http://linked.data.gov.au/def/geofeatures"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:geo="http://www.opengis.net/ont/geosparql#"
+     xmlns:npg="http://ns.nature.com/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sdo="https://schema.org/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:geof="http://linked.data.gov.au/def/geofeatures/"
+     xmlns:prof="http://www.w3.org/ns/dx/prof/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:wiki="https://www.wikidata.org/wiki/"
+     xmlns:sohur="http://sweetontology.net/humanResearch/"
+     xmlns:sorea="http://sweetontology.net/realm/"
+     xmlns:sorel="http://sweetontology.net/rela/"
+     xmlns:biblio="http://purl.org/net/biblio#"
+     xmlns:soreag="http://sweetontology.net/realmGeol/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://linked.data.gov.au/def/geofeatures">
+        <owl:versionIRI rdf:resource="http://linked.data.gov.au/def/geofeatures/0.5"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <dcterms:contributor rdf:resource="http://linked.data.gov.au/org/gsq"/>
+        <dcterms:contributor>
+            <rdf:Description>
+                <sdo:affiliation rdf:resource="http://linked.data.gov.au/org/gsq"/>
+                <sdo:email rdf:resource="mailto:derek.hoy@dnrme.qld.gov.au"/>
+                <sdo:name>Derek Hoy</sdo:name>
+            </rdf:Description>
+        </dcterms:contributor>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-23</dcterms:created>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0001-5489-9590"/>
+        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-8742-7730"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-03-10</dcterms:modified>
+        <dcterms:publisher rdf:resource="http://linked.data.gov.au/org/gsq"/>
+        <skos:definition xml:lang="en">This OWL ontology describes classes of geologic/geological feature relevant to the duties of the Geological Survey of Queensland.
+
+Elements of this ontology are designed to fit within other, broader, ontologies, in particular [Semantic Web for Earth and Environmental Terminology (SWEET) Ontologies](https://github.com/ESIPFed/sweet) ontologies. 
+
+The core of this ontology is a class hierarchy starting with &quot;geologic province&quot;, as it is defined in SWEET, and extending down into multiple subclasses of it.</skos:definition>
+        <skos:prefLabel xml:lang="en">Geologic Features Ontology</skos:prefLabel>
+        <prof:hasResource>
+            <rdf:Description>
+                <dcterms:conformsTo rdf:resource="https://www.w3.org/TR/owl2-overview/"/>
+                <dcterms:format rdf:resource="https://w3id.org/mediatypes/text/turtle"/>
+                <skos:prefLabel xml:lang="en">Ontology document</skos:prefLabel>
+                <prof:hasArtifact rdf:resource="http://linked.data.gov.au/def/geofeatures.ttl"/>
+                <prof:hasRole rdf:resource="http://www.w3.org/ns/dx/prof/role/schema"/>
+            </rdf:Description>
+        </prof:hasResource>
+        <prof:hasResource>
+            <rdf:Description>
+                <dcterms:conformsTo rdf:resource="https://www.w3.org/TR/html52/"/>
+                <dcterms:format rdf:resource="https://w3id.org/mediatypes/text/html"/>
+                <skos:prefLabel xml:lang="en">Ontology documentation</skos:prefLabel>
+                <prof:hasArtifact rdf:resource="http://linked.data.gov.au/def/geofeatures.html"/>
+                <prof:hasRole rdf:resource="http://www.w3.org/ns/dx/prof/role/guidance"/>
+            </rdf:Description>
+        </prof:hasResource>
+        <prof:isProfileOf rdf:resource="http://sweetontology.net/realmGeol"/>
+        <sdo:codeRepository rdf:resource="https://github.com/geological-survey-of-queensland/geofeatures-ont"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ns.nature.com/terms/hasJournal -->
+
+    <owl:AnnotationProperty rdf:about="http://ns.nature.com/terms/hasJournal"/>
+    
+
+
+    <!-- http://ns.nature.com/terms/issue -->
+
+    <owl:AnnotationProperty rdf:about="http://ns.nature.com/terms/issue"/>
+    
+
+
+    <!-- http://ns.nature.com/terms/pages -->
+
+    <owl:AnnotationProperty rdf:about="http://ns.nature.com/terms/pages"/>
+    
+
+
+    <!-- http://ns.nature.com/terms/volume -->
+
+    <owl:AnnotationProperty rdf:about="http://ns.nature.com/terms/volume"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/conformsTo"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/type -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/type"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dx/prof/hasArtifact -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dx/prof/hasArtifact"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dx/prof/hasResource -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dx/prof/hasResource"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dx/prof/hasRole -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dx/prof/hasRole"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dx/prof/isProfileOf -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dx/prof/isProfileOf"/>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/affiliation"/>
+    
+
+
+    <!-- https://schema.org/codeRepository -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/codeRepository"/>
+    
+
+
+    <!-- https://schema.org/email -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/email"/>
+    
+
+
+    <!-- https://schema.org/lastReviewed -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/lastReviewed"/>
+    
+
+
+    <!-- https://schema.org/name -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/name"/>
+    
+
+
+    <!-- https://schema.org/url -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/url"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/AbundanceZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/AbundanceZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/AncientContinent -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/AncientContinent">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/Continent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Anticline -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Anticline">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Anticlinorium -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Anticlinorium">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Antiform -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Antiform">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/AntiformalStack -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/AntiformalStack">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Arch -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Arch">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/AssemblageZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/AssemblageZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/AssociationZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/AssociationZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Bed -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Bed">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Beds -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Beds">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Block -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Block">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/ChronostratigraphicUnit -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/ChronostratigraphicUnit">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Complex -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Complex">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithodemicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/ConcurrentRangeZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/ConcurrentRangeZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Continent -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Continent">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Craton -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Craton">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/CrustalElement -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/CrustalElement">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/GeophysicalDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/DenudationalFeature -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/DenudationalFeature">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Depression -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Depression">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Dome -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Dome">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Duplex -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Duplex">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Embayment -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Embayment">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Escarpment -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Escarpment">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/ExtendedCrustProvince -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/ExtendedCrustProvince">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Fault -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Fault">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/FaultScarp -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/FaultScarp">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/FaultSet -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/FaultSet">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/FaultSystem -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/FaultSystem">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/FaultZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/FaultZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Flow -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Flow">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Fold -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Fold">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/FoldBelt -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/FoldBelt">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Formation -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Formation">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/GeoResourceAccumulation -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/GeoResourceAccumulation">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/realmGeol/GeologicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/GeophysicalDomain -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/GeophysicalDomain">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/GeophysicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/GeophysicalFeature -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/GeophysicalFeature">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/realmGeol/GeologicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Graben -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Graben">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Group -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Group">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/HalfGraben -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/HalfGraben">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Horst -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Horst">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/IgneousProvince -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/IgneousProvince">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Inlier -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Inlier">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/DenudationalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/IntervalZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/IntervalZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Klippe -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Klippe">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/DenudationalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/LargeIgneousProvince -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/LargeIgneousProvince">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/LineageZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/LineageZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Lithodeme -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Lithodeme">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithodemicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/LithodemicFeature -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/LithodemicFeature">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/realmGeol/GeologicFeature"/>
+        <owl:disjointWith rdf:resource="http://linked.data.gov.au/def/geofeatures/StratigraphicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySubzone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySubzone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySuperzone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySuperzone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolarityZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolarityZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicUnit -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicUnit">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Member -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Member">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MineralProvince -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/MineralProvince">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Monocline -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Monocline">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MyloniteZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/MyloniteZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Nappe -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Nappe">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/NappeComplex -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/NappeComplex">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Orogen -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Orogen">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/OrogenicCollage -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/OrogenicCollage">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Outlier -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Outlier">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/DenudationalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/OverturnedFold -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/OverturnedFold">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/PedostratigraphicUnit -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/PedostratigraphicUnit">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Peneplain -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Peneplain">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/DenudationalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/PresentContinent -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/PresentContinent">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/Continent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/RangeZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/RangeZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Ridge -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Ridge">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/SedimentaryBasin -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/SedimentaryBasin">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/SeismicProvince -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/SeismicProvince">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/GeophysicalDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/SequenceStratigraphicUnit -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/SequenceStratigraphicUnit">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/ShearZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/ShearZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Shield -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Shield">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/StratigraphicEvent -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/StratigraphicEvent">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StratigraphicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/StratigraphicFeature -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/StratigraphicFeature">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/realmGeol/GeologicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/StratigraphicUnit -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/StratigraphicUnit">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StratigraphicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/StructuralFeature -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/StructuralFeature">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/realmGeol/GeologicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Subbasin -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Subbasin">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/SedimentaryBasin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Subgroup -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Subgroup">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Suite -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Suite">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithodemicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Superbasin -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Superbasin">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/SedimentaryBasin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Supercontinent -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Supercontinent">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://linked.data.gov.au/def/geofeatures/Continent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Supergroup -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Supergroup">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Supersuite -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Supersuite">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/LithodemicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Syncline -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Syncline">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Synclinorium -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Synclinorium">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Synform -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Synform">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/TaxonRangeZone -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/TaxonRangeZone">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/TectonicEntity -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/TectonicEntity">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/TectonicFeature -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/TectonicFeature">
+        <rdfs:subClassOf rdf:resource="http://sweetontology.net/realmGeol/GeologicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/TectonicPlate -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/TectonicPlate">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/TectonisedMetomorphosedProvince -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/TectonisedMetomorphosedProvince">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Terrane -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Terrane">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Trough -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Trough">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/SedimentaryBasin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Unconformity -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Unconformity">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/DenudationalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Window -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/Window">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/DenudationalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity -->
+
+    <owl:Class rdf:about="http://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity">
+        <rdfs:subClassOf rdf:resource="http://linked.data.gov.au/def/geofeatures/TectonicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://sweetontology.net/realmGeol/GeologicFeature -->
+
+    <owl:Class rdf:about="http://sweetontology.net/realmGeol/GeologicFeature"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.glossaryofgeology.org -->
+
+    <owl:NamedIndividual rdf:about="http://www.glossaryofgeology.org">
+        <dcterms:creator>
+            <rdf:Description/>
+        </dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2011</dcterms:date>
+        <dcterms:identifier>ISBN: 978-0-922152-92-6</dcterms:identifier>
+        <dcterms:publisher>American Geosciences Institute, Alexandria, Virginia USA</dcterms:publisher>
+        <dcterms:title>Glossary of Geology (Fifth Edition Revised)</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Book"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q571"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://doi.org/10.22459/SN.08.2012 -->
+
+    <owl:NamedIndividual rdf:about="http://doi.org/10.22459/SN.08.2012">
+        <dcterms:creator>Richard S. Blewett</dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2012</dcterms:date>
+        <dcterms:identifier>ISBN: 9781921862823</dcterms:identifier>
+        <dcterms:publisher>ANU Press</dcterms:publisher>
+        <dcterms:title>Shaping a Nation: A Geology of Australia</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Book"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q571"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures"/>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/AbundanceZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/AbundanceZone">
+        <skos:notation>gfabz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/AncientContinent -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/AncientContinent">
+        <skos:notation>gfanc</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Anticline -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Anticline">
+        <skos:notation>gfann</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Anticlinorium -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Anticlinorium">
+        <skos:notation>gfanm</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Antiform -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Antiform">
+        <skos:notation>gfant</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/AntiformalStack -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/AntiformalStack">
+        <skos:notation>gfank</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Arch -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Arch">
+        <skos:notation>gfarh</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/AssemblageZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/AssemblageZone">
+        <skos:notation>gfasz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/AssociationZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/AssociationZone">
+        <skos:notation>gfasn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Bed -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Bed">
+        <skos:notation>gfbed</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Beds -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Beds">
+        <skos:notation>gfbds</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit">
+        <skos:notation>gfbst</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Block -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Block">
+        <skos:notation>gfblk</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/ChronostratigraphicUnit -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/ChronostratigraphicUnit">
+        <skos:notation>gfcht</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Complex -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Complex">
+        <skos:notation>gfcmx</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/ConcurrentRangeZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/ConcurrentRangeZone">
+        <skos:notation>gfcrz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Continent -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Continent">
+        <skos:notation>gfcnt</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Craton -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Craton">
+        <skos:notation>gfcrn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/CrustalElement -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/CrustalElement">
+        <skos:notation>gfcrt</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/DenudationalFeature -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/DenudationalFeature">
+        <skos:notation>gfdnf</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Depression -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Depression">
+        <skos:notation>gfdpn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Dome -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Dome">
+        <skos:notation>gfdme</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Duplex -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Duplex">
+        <skos:notation>gfdpx</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Embayment -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Embayment">
+        <skos:notation>gfeby</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Escarpment -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Escarpment">
+        <skos:notation>gfecp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/ExtendedCrustProvince -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/ExtendedCrustProvince">
+        <skos:notation>gfxcp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Fault -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Fault">
+        <skos:notation>gfflt</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/FaultScarp -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/FaultScarp">
+        <skos:notation>gfflp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/FaultSet -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/FaultSet">
+        <skos:notation>gffts</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/FaultSystem -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/FaultSystem">
+        <skos:notation>gfflm</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/FaultZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/FaultZone">
+        <skos:notation>gfflz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Flow -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Flow">
+        <skos:notation>gfflw</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Fold -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Fold">
+        <skos:notation>gffld</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/FoldBelt -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/FoldBelt">
+        <skos:notation>gffdb</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Formation -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Formation">
+        <skos:notation>gffrm</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/GeoResourceAccumulation -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/GeoResourceAccumulation">
+        <skos:notation>gfgra</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/GeologicalHeritageSite -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/GeologicalHeritageSite">
+        <skos:notation>gfghs</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/GeologicallySignificantSite -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/GeologicallySignificantSite">
+        <skos:notation>gfgss</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Geopark -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Geopark">
+        <skos:notation>gfgpk</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/GeophysicalDomain -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/GeophysicalDomain">
+        <skos:notation>gfgpd</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/GeophysicalFeature -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/GeophysicalFeature">
+        <skos:notation>gfgpf</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Geotrail -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Geotrail">
+        <skos:notation>gfgtl</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Graben -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Graben">
+        <skos:notation>gfgbn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Group -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Group">
+        <skos:notation>gfgrp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/HalfGraben -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/HalfGraben">
+        <skos:notation>gfhgn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Horst -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Horst">
+        <skos:notation>gfhrt</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/IgneousProvince -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/IgneousProvince">
+        <skos:notation>gfigp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Inlier -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Inlier">
+        <skos:notation>gfinl</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/IntervalZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/IntervalZone">
+        <skos:notation>gfinz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Klippe -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Klippe">
+        <skos:notation>gfklp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/LargeIgneousProvince -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/LargeIgneousProvince">
+        <skos:notation>gflip</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/LineageZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/LineageZone">
+        <skos:notation>gflnz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Lithodeme -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Lithodeme">
+        <skos:notation>gfltd</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/LithodemicFeature -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/LithodemicFeature">
+        <skos:notation>gfldf</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit">
+        <skos:notation>gflsu</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySubzone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySubzone">
+        <skos:notation>gfmpb</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySuperzone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySuperzone">
+        <skos:notation>gfmpp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolarityZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolarityZone">
+        <skos:notation>gfmpz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicUnit -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicUnit">
+        <skos:notation>gfmsu</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Member -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Member">
+        <skos:notation>gfmbr</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MineralProvince -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/MineralProvince">
+        <skos:notation>gfmnp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Monocline -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Monocline">
+        <skos:notation>gfmnc</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/MyloniteZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/MyloniteZone">
+        <skos:notation>gfmyz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Nappe -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Nappe">
+        <skos:notation>gfnpp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/NappeComplex -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/NappeComplex">
+        <skos:notation>gfnpx</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Orogen -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Orogen">
+        <skos:notation>gforn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/OrogenicCollage -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/OrogenicCollage">
+        <skos:notation>gforg</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Outlier -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Outlier">
+        <skos:notation>gfout</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/OverturnedFold -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/OverturnedFold">
+        <skos:notation>gfofz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/PedostratigraphicUnit -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/PedostratigraphicUnit">
+        <skos:notation>pdu</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Peneplain -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Peneplain">
+        <skos:notation>gfpnn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/PresentContinent -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/PresentContinent">
+        <skos:notation>gfprc</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/RangeZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/RangeZone">
+        <skos:notation>gfrnz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Ridge -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Ridge">
+        <skos:notation>gfrdg</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/SedimentaryBasin -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/SedimentaryBasin">
+        <skos:notation>gfsdb</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/SeismicProvince -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/SeismicProvince">
+        <skos:notation>gfssp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/SequenceStratigraphicUnit -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/SequenceStratigraphicUnit">
+        <skos:notation>gfsqu</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/ShearZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/ShearZone">
+        <skos:notation>gfshz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Shield -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Shield">
+        <skos:notation>gfshd</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/StratigraphicEvent -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/StratigraphicEvent">
+        <skos:notation>gfste</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/StratigraphicFeature -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/StratigraphicFeature">
+        <skos:notation>gfstf</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/StratigraphicUnit -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/StratigraphicUnit">
+        <skos:notation>gfstu</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/StructuralFeature -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/StructuralFeature">
+        <skos:notation>gfstr</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Subbasin -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Subbasin">
+        <skos:notation>gfsbn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Subgroup -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Subgroup">
+        <skos:notation>gfsbg</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Suite -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Suite">
+        <skos:notation>gfsut</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Superbasin -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Superbasin">
+        <skos:notation>gfspb</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Supercontinent -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Supercontinent">
+        <skos:notation>gfspc</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Supercraton -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Supercraton">
+        <skos:notation>gfspn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Supergroup -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Supergroup">
+        <skos:notation>gfspg</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Supersuite -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Supersuite">
+        <skos:notation>gfsps</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Syncline -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Syncline">
+        <skos:notation>gfsyn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Synclinorium -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Synclinorium">
+        <skos:notation>gfsyc</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Synform -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Synform">
+        <skos:notation>gfsyf</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/TaxonRangeZone -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/TaxonRangeZone">
+        <skos:notation>gftrz</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/TectonicEntity -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/TectonicEntity">
+        <skos:notation>gftey</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/TectonicFeature -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/TectonicFeature">
+        <skos:notation>gftcr</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/TectonicPlate -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/TectonicPlate">
+        <skos:notation>gfplt</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/TectonisedMetomorphosedProvince -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/TectonisedMetomorphosedProvince">
+        <skos:notation>gftmp</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Terrane -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Terrane">
+        <skos:notation>gftrn</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Trough -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Trough">
+        <skos:notation>gftrh</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Unconformity -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Unconformity">
+        <skos:notation>gfunc</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/Window -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/Window">
+        <skos:notation>gfwnw</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/ref01 -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/ref01">
+        <dcterms:creator>Geological Society of Australia</dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020</dcterms:date>
+        <dcterms:publisher>Geological Society of Australia</dcterms:publisher>
+        <dcterms:title>ACT Geoheritage</dcterms:title>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q35127"/>
+        <sdo:url rdf:resource="https://www.gsa.org.au/Public/Geoheritage/ACT_Geoheritage/Public/Geoheritage/ACT_Geoheritage.aspx?hkey=396c84ce-9cb1-47d9-91c7-5770f97a8896"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/ref02 -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/ref02">
+        <dcterms:creator>Geological Society of Australia</dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020</dcterms:date>
+        <dcterms:publisher>Geological Society of Australia</dcterms:publisher>
+        <dcterms:title>Geotourism and Geotrails</dcterms:title>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q35127"/>
+        <sdo:url rdf:resource="https://www.gsa.org.au/Public/Geotourism/Geotourism%20and%20Geotrails/Public/Geotourism/Geotourism%20and%20Geotrails.aspx?hkey=f3ee82ea-de9a-44eb-82f7-377d2d28d2ba"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity">
+        <skos:notation>gftse</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://linked.data.gov.au/org/gsq -->
+
+    <owl:NamedIndividual rdf:about="http://linked.data.gov.au/org/gsq">
+        <sdo:email rdf:resource="mailto:geological_info@dnrme.qld.gov.au"/>
+        <sdo:name>Geological Survey of Queensland</sdo:name>
+        <sdo:url rdf:resource="https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://pid.geoscience.gov.au/dataset/ga/14909 -->
+
+    <owl:NamedIndividual rdf:about="http://pid.geoscience.gov.au/dataset/ga/14909">
+        <dcterms:creator>
+            <rdf:Description/>
+        </dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1996</dcterms:date>
+        <dcterms:identifier>Record 1996/30</dcterms:identifier>
+        <dcterms:publisher>Geoscience Australia</dcterms:publisher>
+        <dcterms:title>Australian Crustal Elements Map. Australian Geological Survey Organisation</dcterms:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://pid.geoscience.gov.au/dataset/ga/70149 -->
+
+    <owl:NamedIndividual rdf:about="http://pid.geoscience.gov.au/dataset/ga/70149">
+        <dcterms:creator>
+            <rdf:Description/>
+        </dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2010</dcterms:date>
+        <dcterms:publisher rdf:resource="http://linked.data.gov.au/org/ga"/>
+        <dcterms:title>South Australia Seismic and MT Workshop 2010: Extended Abstracts</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Book"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q571"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://sweetontology.net/realmGeol/GeologicFeature -->
+
+    <owl:NamedIndividual rdf:about="http://sweetontology.net/realmGeol/GeologicFeature">
+        <skos:notation>gfeat</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.stratigraphy.org/index.php/ics-stratigraphicguide -->
+
+    <owl:NamedIndividual rdf:about="http://www.stratigraphy.org/index.php/ics-stratigraphicguide">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2013</dcterms:created>
+        <dcterms:creator>International Commission on Stratigraphy</dcterms:creator>
+        <dcterms:publisher>International Commission on Stratigraphy</dcterms:publisher>
+        <dcterms:title>Stratigraphic Guide</dcterms:title>
+        <dcterms:type rdf:resource="https://schema.org/WebSite"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q35127"/>
+        <sdo:lastReviewed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-20</sdo:lastReviewed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824 -->
+
+    <owl:NamedIndividual rdf:about="https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824">
+        <npg:hasJournal>
+            <rdf:Description>
+                <npg:issue>2</npg:issue>
+                <npg:pages>106–116</npg:pages>
+                <npg:volume>6</npg:volume>
+                <sdo:name>Stratigraphy</sdo:name>
+            </rdf:Description>
+        </npg:hasJournal>
+        <dcterms:creator>Donald E. Owen</dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2009</dcterms:date>
+        <dcterms:publisher>North American Commission on Stratigraphic Nomenclature</dcterms:publisher>
+        <dcterms:title>How to use stratigraphic terminology in papers</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Article"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q191067"/>
+        <sdo:url rdf:resource="https://www.semanticscholar.org/paper/How-to-use-stratigraphic-terminology-in-papers%2C-and-Owen/87841f3c9bbf290f2e80cfb7c8841b27a5342391"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1007/978-3-662-03999-1 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1007/978-3-662-03999-1">
+        <dcterms:creator>Andrew D. Miall</dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2000</dcterms:date>
+        <dcterms:identifier>ISBN: 978-3-540-65790-3</dcterms:identifier>
+        <dcterms:publisher>Springer-Verlag Berlin Heidelberg</dcterms:publisher>
+        <dcterms:title>Principles of Sedimentary Basin Analysis. Third, Updated and Enlarged Edition</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Book"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q571"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1016/j.revpalbo.2014.04.002 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1016/j.revpalbo.2014.04.002">
+        <npg:hasJournal>
+            <rdf:Description>
+                <npg:pages>18-37</npg:pages>
+                <npg:volume>207</npg:volume>
+                <sdo:name>Review of Palaeobotany and Palynology</sdo:name>
+            </rdf:Description>
+        </npg:hasJournal>
+        <dcterms:creator>
+            <rdf:Description/>
+        </dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2014</dcterms:date>
+        <dcterms:publisher>Elsevier</dcterms:publisher>
+        <dcterms:title>From the Transantarctic Basin to the Ferrar Large Igneous Province — New Palynostratigraphic Age Constraints for Triassic–Jurassic Sedimentation and Magmatism in East Antarctica</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Article"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q191067"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1016/j.tecto.2012.02.022 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1016/j.tecto.2012.02.022">
+        <npg:hasJournal>
+            <rdf:Description>
+                <npg:pages>76-99</npg:pages>
+                <npg:volume>572-573</npg:volume>
+                <sdo:name>Tectonophysics</sdo:name>
+            </rdf:Description>
+        </npg:hasJournal>
+        <dcterms:creator>
+            <rdf:Description/>
+        </dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2012</dcterms:date>
+        <dcterms:publisher>Elsevier</dcterms:publisher>
+        <dcterms:title>Crustal Architecture and Geodynamics of North Queensland, Australia: Insights from Deep Seismic Reflection Profiling</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Article"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q191067"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1080/01916122.2012.718609 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1080/01916122.2012.718609">
+        <npg:hasJournal>
+            <rdf:Description>
+                <npg:pages>77-114</npg:pages>
+                <npg:volume>37</npg:volume>
+                <sdo:name>Palynology</sdo:name>
+            </rdf:Description>
+        </npg:hasJournal>
+        <dcterms:creator>
+            <rdf:Description/>
+        </dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2013</dcterms:date>
+        <dcterms:publisher>Taylor &amp; Francis</dcterms:publisher>
+        <dcterms:title>Palynology of the Triassic–Jurassic transition in southeastern Queensland, Australia, and correlation with New Zealand</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Article"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q191067"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1080/08120098508729316 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1080/08120098508729316">
+        <npg:hasJournal>
+            <rdf:Description>
+                <npg:issue>2</npg:issue>
+                <npg:pages>83-106</npg:pages>
+                <npg:volume>32</npg:volume>
+                <sdo:name>Australian Journal of Earth Sciences</sdo:name>
+            </rdf:Description>
+        </npg:hasJournal>
+        <dcterms:creator>H. R. E. Staines</dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1985</dcterms:date>
+        <dcterms:publisher>Geological Society of Australia</dcterms:publisher>
+        <dcterms:title>Field Geologist&apos;s Guide to Lithostratigraphic Nomenclature in Australia</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Article"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q191067"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1080/11035897.2016.1178666 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1080/11035897.2016.1178666">
+        <npg:hasJournal>
+            <rdf:Description>
+                <npg:issue>1</npg:issue>
+                <npg:pages>3-20</npg:pages>
+                <npg:volume>139</npg:volume>
+                <sdo:name>GFF</sdo:name>
+            </rdf:Description>
+        </npg:hasJournal>
+        <dcterms:creator>Risto A. Kumpulainen</dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2017</dcterms:date>
+        <dcterms:publisher>Taylor &amp; Francis</dcterms:publisher>
+        <dcterms:title>Guide for geological nomenclature in Sweden</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Article"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q191067"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1093/acref/9780199653065.001.0001 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1093/acref/9780199653065.001.0001">
+        <dcterms:creator>Michael Allaby</dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2013</dcterms:date>
+        <dcterms:description>Online version</dcterms:description>
+        <dcterms:identifier>ISBN: 9780199653065</dcterms:identifier>
+        <dcterms:publisher>Oxford University Press</dcterms:publisher>
+        <dcterms:title>A Dictionary of Geology and Earth Sciences (Fourth Edition)</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Book"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q571"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1127/0078-0421/2011/0011 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1127/0078-0421/2011/0011">
+        <npg:hasJournal>
+            <rdf:Description>
+                <npg:issue>3</npg:issue>
+                <npg:pages>173-245</npg:pages>
+                <npg:volume>44</npg:volume>
+                <sdo:name>Newsletters on Stratigraphy</sdo:name>
+            </rdf:Description>
+        </npg:hasJournal>
+        <dcterms:creator>
+            <rdf:Description/>
+        </dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2011</dcterms:date>
+        <dcterms:publisher>Schweizerbart Science Publishers</dcterms:publisher>
+        <dcterms:title>Sequence Stratigraphy: Methodology and Nomenclature</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Article"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q191067"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1130/9780813774022 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1130/9780813774022">
+        <dcterms:creator>Amos Salvador</dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2013</dcterms:date>
+        <dcterms:identifier>ISBN: 978-0-813-77402-2</dcterms:identifier>
+        <dcterms:publisher>Geological Society of America</dcterms:publisher>
+        <dcterms:title>International Stratigraphic Guide</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Book"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q571"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1146/annurev-earth-082517-010146 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1146/annurev-earth-082517-010146">
+        <npg:hasJournal>
+            <rdf:Description>
+                <npg:pages>291-325</npg:pages>
+                <npg:volume>46</npg:volume>
+                <sdo:name>Annual Review of Earth and Planetary Sciences</sdo:name>
+            </rdf:Description>
+        </npg:hasJournal>
+        <dcterms:creator>Gideon Rosenbaum</dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2018</dcterms:date>
+        <dcterms:publisher>Annual Reviews</dcterms:publisher>
+        <dcterms:title>The Tasmanides: Phanerozoic Tectonic Evolution of Eastern Australia</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Article"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q191067"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1306/05230505015 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1306/05230505015">
+        <npg:hasJournal>
+            <rdf:Description>
+                <npg:issue>11</npg:issue>
+                <npg:pages>1547–1591</npg:pages>
+                <npg:volume>89</npg:volume>
+                <sdo:name>AAPG Bulletin</sdo:name>
+            </rdf:Description>
+        </npg:hasJournal>
+        <dcterms:creator>
+            <rdf:Description/>
+        </dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2005</dcterms:date>
+        <dcterms:publisher>American Association of Petroleum Geologists</dcterms:publisher>
+        <dcterms:title>North American Commission on Stratigraphic Nomenclature</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Article"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q191067"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://earthquake.usgs.gov/data/crust/definitions.html -->
+
+    <owl:NamedIndividual rdf:about="https://earthquake.usgs.gov/data/crust/definitions.html">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2017</dcterms:created>
+        <dcterms:creator>US Geological Survey</dcterms:creator>
+        <dcterms:publisher>US Geological Survey</dcterms:publisher>
+        <dcterms:source>The Glossary of Geology (1980)</dcterms:source>
+        <dcterms:title>A listing of the geologic provinces and their subcategories</dcterms:title>
+        <dcterms:type rdf:resource="https://schema.org/WebSite"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q35127"/>
+        <sdo:lastReviewed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-04-10</sdo:lastReviewed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://en.wikipedia.org/wiki/Geologic_province -->
+
+    <owl:NamedIndividual rdf:about="https://en.wikipedia.org/wiki/Geologic_province">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020</dcterms:created>
+        <dcterms:creator>Wikipedia contributors</dcterms:creator>
+        <dcterms:publisher>Wikipedia</dcterms:publisher>
+        <dcterms:title>Geologic province</dcterms:title>
+        <dcterms:type rdf:resource="https://schema.org/WebSite"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q35127"/>
+        <sdo:lastReviewed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-04-10</sdo:lastReviewed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0001-5489-9590 -->
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0001-5489-9590">
+        <sdo:affiliation rdf:resource="http://linked.data.gov.au/org/gsq"/>
+        <sdo:email rdf:resource="mailto:john.mckellar@dnrme.qld.gov.au"/>
+        <sdo:name>John L. McKellar</sdo:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0002-8742-7730 -->
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-8742-7730">
+        <sdo:affiliation>
+            <rdf:Description>
+                <sdo:name>SURROUND Australia Pty Ltd</sdo:name>
+                <sdo:url rdf:resource="https://surroundaustralia.com"/>
+            </rdf:Description>
+        </sdo:affiliation>
+        <sdo:email rdf:resource="mailto:nicholas.car@surroundaustralia.com"/>
+        <sdo:name>Nicholas J. Car</sdo:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://pubs.usgs.gov/gip/dynamic/tectonic.html -->
+
+    <owl:NamedIndividual rdf:about="https://pubs.usgs.gov/gip/dynamic/tectonic.html">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1999</dcterms:created>
+        <dcterms:creator>US Geological Survey</dcterms:creator>
+        <dcterms:publisher>US Geological Survey</dcterms:publisher>
+        <dcterms:title>What is a tectonic plate?</dcterms:title>
+        <dcterms:type rdf:resource="https://schema.org/WebSite"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q35127"/>
+        <sdo:lastReviewed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-04-10</sdo:lastReviewed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.elsevier.com/books/the-geologic-time-scale-2012/gradstein/978-0-444-59425-9 -->
+
+    <owl:NamedIndividual rdf:about="https://www.elsevier.com/books/the-geologic-time-scale-2012/gradstein/978-0-444-59425-9">
+        <dcterms:creator>
+            <rdf:Description/>
+        </dcterms:creator>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-31</dcterms:date>
+        <dcterms:identifier>ISBN: 978-0-444-59448-8</dcterms:identifier>
+        <dcterms:publisher>Elsevier, Amsterdam</dcterms:publisher>
+        <dcterms:title>The Geologic Time Scale 2012</dcterms:title>
+        <dcterms:type rdf:resource="http://purl.org/net/biblio#Book"/>
+        <dcterms:type rdf:resource="https://www.wikidata.org/wiki/Q571"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <sdo:affiliation rdf:resource="http://linked.data.gov.au/org/gsq"/>
+        <sdo:email rdf:resource="mailto:derek.hoy@dnrme.qld.gov.au"/>
+        <sdo:name>Derek Hoy</sdo:name>
+    </rdf:Description>
+    <rdf:Description>
+        <dcterms:conformsTo rdf:resource="https://www.w3.org/TR/owl2-overview/"/>
+        <dcterms:format rdf:resource="https://w3id.org/mediatypes/text/turtle"/>
+        <skos:prefLabel xml:lang="en">Ontology document</skos:prefLabel>
+        <prof:hasArtifact rdf:resource="http://linked.data.gov.au/def/geofeatures.ttl"/>
+        <prof:hasRole rdf:resource="http://www.w3.org/ns/dx/prof/role/schema"/>
+    </rdf:Description>
+    <rdf:Description>
+        <dcterms:conformsTo rdf:resource="https://www.w3.org/TR/html52/"/>
+        <dcterms:format rdf:resource="https://w3id.org/mediatypes/text/html"/>
+        <skos:prefLabel xml:lang="en">Ontology documentation</skos:prefLabel>
+        <prof:hasArtifact rdf:resource="http://linked.data.gov.au/def/geofeatures.html"/>
+        <prof:hasRole rdf:resource="http://www.w3.org/ns/dx/prof/role/guidance"/>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/AbundanceZone">
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <skos:prefLabel xml:lang="en">abundance zone</skos:prefLabel>
+        <skos:definition xml:lang="en">The body of strata in which the abundance of a particular taxon or specified group of taxa is significantly greater than is usual in the adjacent parts of the section. (ICS, Online, December 2019)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/AncientContinent">
+        <skos:prefLabel xml:lang="en">ancient continent</skos:prefLabel>
+        <dcterms:source rdf:resource="http://linked.data.gov.au/def/geofeatures"/>
+        <skos:definition xml:lang="en">A continent that has been recognised as being a distinct entity in the past and not as a supercontinent, and, is not recognised as a present-day continent, although it may form part of one or more (present-day continents). (Definition created here)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Anticline">
+        <skos:prefLabel xml:lang="en">anticline</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">A fold, generally convex upward, whose core contains the stratigraphically older rocks. (Neuendorf et al., 2011)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Anticlinorium">
+        <skos:definition xml:lang="en">A composite anticlinal structure of regional extent composed of lesser folds. (Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">anticlinorium</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Antiform">
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">Any convex-upward, concave downward fold. The term is usually used when the folded layers do not possess a stratigraphic order, when the stratigraphic order of the folded layers is not known, or when the fold core also contains the stratigraphically younger rock. (Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">antiform</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/AntiformalStack">
+        <skos:prefLabel xml:lang="en">antiformal stack</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">A duplex in which the trailing branch lines coincide and the leading branch lines either nearly coincide or lie vertically above each other. This results in a stack of horses and leads to a local culmination in thrust sheet. (Neuendorf et al. (2011) citing Boyer &amp; Elliott (1982))</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Arch">
+        <skos:prefLabel xml:lang="en">arch</skos:prefLabel>
+        <skos:definition xml:lang="en">A broad, open anticlinal fold on a regional scale; it is usually a basement doming. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/AssemblageZone">
+        <skos:prefLabel xml:lang="en">assemblage zone</skos:prefLabel>
+        <skos:definition xml:lang="en">The body of strata characterized by an assemblage of three or more fossil taxa that, taken together, distinguishes it in biostratigraphic character from adjacent strata. (ICS, Online, December 2019)</skos:definition>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/AssociationZone">
+        <skos:prefLabel xml:lang="en">association zone</skos:prefLabel>
+        <skos:definition xml:lang="en">The body of strata between two designated biostratigraphical horizons, which represent the boundaries of the unit and separate it from any preceding or succeeding biozone. These bounding horizons may be delimited individually by: the level of the first stratigraphical appearance (lowermost or oldest occurrence) of a specified taxon (species, genus) in any one stratigraphical section; or another specified biostratigraphical feature considered to approximate a time horizon. The zone is further delimited by specified taxa (preferably, at least three), which have first appearances within the zone. (de Jersey &amp; McKellar, 2013; Bomfleur et al., 2014)</skos:definition>
+        <dcterms:source rdf:resource="https://doi.org/10.1016/j.revpalbo.2014.04.002"/>
+        <dcterms:source rdf:resource="https://doi.org/10.1080/01916122.2012.718609"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Bed">
+        <dcterms:source rdf:resource="https://doi.org/10.1080/08120098508729316"/>
+        <skos:prefLabel xml:lang="en">bed</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1130/9780813774022"/>
+        <skos:definition xml:lang="en">Bed (Beds) is the smallest formal unit in the hierarchy of sedimentary lithostratigraphic units, e.g. a single stratum lithologically distinguishable from other layers above and below (Salvador, 2013; ICS Online, January 2020). Customarily, only distinctive beds (commonly known as marker beds), which are particularly useful for stratigraphic purposes, like correlation or reference, are given proper names and considered formal lithostratigraphic units (Staines, 1985)</skos:definition>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Beds">
+        <skos:prefLabel xml:lang="en">beds</skos:prefLabel>
+        <skos:definition xml:lang="en">beds (uncapitalised): an informal unit applied to a sequence of poorly known strata until further work is carried out, as advised in the Field Geologist’s Guide to Lithostratigraphic Nomenclature in Australia (Staines, 1985), and endorsed by the Stratigraphic Nomenclature Committee, Geological Society of Australia.</skos:definition>
+        <dcterms:source rdf:resource="https://doi.org/10.1080/08120098508729316"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/BiostratigraphicUnit">
+        <skos:prefLabel xml:lang="en">biostratigraphic unit</skos:prefLabel>
+        <skos:definition xml:lang="en">Biostratigraphic units/Biostratigraphic Zones (biozones) are bodies of strata that are defined or characterized on the basis of their contained fossils.  The different types have no hierarchical significance, and are not based on mutually exclusive criteria. (ICS, Online, December 2019)</skos:definition>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Block">
+        <skos:definition xml:lang="en">A block of the crust that has been displaced by movement on a fault. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:prefLabel xml:lang="en">block</skos:prefLabel>
+        <skos:altLabel xml:lang="en">fault block</skos:altLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/ChronostratigraphicUnit">
+        <skos:definition xml:lang="en">As the term implies, Chronostratigraphic Units are Time-Rock Units. They are bodies of rocks, layered or unlayered, that were formed during a specified interval of geologic time. [The units of geologic time during which chronostratigraphic units were formed are called geochronologic (geological-time) units.] (ICS, Online, December, 2019). NB: The North American Stratigraphic Code (2005) and Owen (2009) advise that geochronologic units should only be associated with Lithodemic (non-stratigraphic) Units.</skos:definition>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <skos:prefLabel xml:lang="en">chronostratigraphic unit</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1306/05230505015"/>
+        <dcterms:source rdf:resource="https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.605.7824"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Complex">
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+        <skos:definition xml:lang="en">In the classification of Kumpulainen (2016), a complex is a non-ranked lithodemic unit that corresponds to a suite or supersuite. Its usage applies to the organisation and classification of an assemblage of two or more genetically different rock types (i.e. igneous, metamorphic and/or sedimentary). For example, a tectonic amalgamation of igneous, sedimentary and metamorphic rocks may form a structural complex; and a volcanic complex may comprise extrusive, sedimentary and the related intrusive components.</skos:definition>
+        <skos:prefLabel xml:lang="en">complex</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/ConcurrentRangeZone">
+        <skos:prefLabel xml:lang="en">concurrent range zone</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <skos:definition xml:lang="en">The body of strata including the overlapping parts of the range zones of two specified taxa. (ICS, Online, December 2019)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Continent">
+        <dcterms:source rdf:resource="http://doi.org/10.22459/SN.08.2012"/>
+        <skos:prefLabel xml:lang="en">continent</skos:prefLabel>
+        <skos:definition xml:lang="en">One of Earth’s major landmasses (or former major landmasses), including continental shelves. (Neuendorf et al., 2011; Blewett, 2012). The Australian Continent, as an example, is divided into fundamental geological elements embracing geological provinces.</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Craton">
+        <skos:definition xml:lang="en">A craton is part of Earth&apos;s continental crust that has attained stability and has been little deformed for a prolonged period. Cratons include shield areas, where Precambrian rocks are exposed, and platform areas, where Precambrian rocks are overlain by a thin layer of Phanerozoic strata. (Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">craton</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/CrustalElement">
+        <skos:definition xml:lang="en">Crustal Elements are geophysical domains that represent upper-crustal segments showing some overall commonality of geophysical properties, primarily magnetic and gravity data sets. Crustal elements are not geologically defined features, such as basement provinces. The latter are defined on the basis of geological criteria and are three-dimensional bodies that have a definite thickness and represent time-rock units whose maximum and minimum ages are generally, but not always, well established. Some crustal elements could represent a set of overlying or overlapping basement provinces. (Shaw et al., 1996)</skos:definition>
+        <dcterms:source rdf:resource="http://pid.geoscience.gov.au/dataset/ga/14909"/>
+        <skos:prefLabel xml:lang="en">crustal element</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/DenudationalFeature">
+        <skos:prefLabel xml:lang="en">denudational feature</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+        <skos:definition xml:lang="en">Structures shaped by weathering and erosion; include inlier, outlier, window, klippe, unconformity and peneplain (Kumpulainen, 2017)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Depression">
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">A structurally low area formed in the crust, with various mechanisms of formation. (Modified from Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">depression</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Dome">
+        <skos:prefLabel xml:lang="en">dome</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">An uplift or anticlinal structure, either circular or elliptical in outline, in which the rocks dip gently away in all directions. A dome may be small or many kilometers in diameter. Domes include diapirs, volcanic domes, and cratonic uplifts. (Neuendorf et al., 2011)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Duplex">
+        <skos:prefLabel xml:lang="en">duplex</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Duplex Fault Zone</skos:altLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">A structural complex consisting of a roof thrust at the top and a floor thrust at the base, within which a suite of more steeply dipping imbricate thrust faults thicken and shorten the intervening panel of rock (Neuendorf et al. (2011) citing Dahlstrom (1970), Boyer (1976))</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Embayment">
+        <skos:definition xml:lang="en">A downwarped area containing stratified rocks, either sedimentary or volcanic or both, that extends into a terrain of other rocks. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:prefLabel xml:lang="en">embayment</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Escarpment">
+        <skos:altLabel xml:lang="en">cuesta</skos:altLabel>
+        <skos:altLabel xml:lang="en">scarpland</skos:altLabel>
+        <skos:prefLabel xml:lang="en">escarpment</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">(a) A long, more or less continuous cliff or relatively steep slope facing in one general direction, breaking the continuity of the land by separating two levels of gently sloping surfaces, and produced by erosion or faulting. The term is often used synonymously with scarp, although escarpment is more often applied to a cliff formed by differential erosion;  (b) A steep, abrupt face of rock, often presented by the highest strata in a line of cliffs, and generally marking the outcrop of a resistant layer occurring in a series of gently dipping softer strata, specifically the steep face of a cuesta; (c) A term used loosely in Great Britain as a synonym of cuesta. (Neuendorf et al., 2011)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/ExtendedCrustProvince">
+        <skos:scopeNote>The Basin and Range Province is associated with ongoing tectonic extension since the early Miocene and is characterised by alternating narrow faulted mountain chains and flat arid valleys/basins, overall displaying abrupt changes in elevation. (USGS 2017; Wikipedia (Geologic Province), 2020)</skos:scopeNote>
+        <dcterms:source rdf:resource="https://earthquake.usgs.gov/data/crust/definitions.html"/>
+        <skos:definition xml:lang="en">A province of thinned crust (&gt;50 %) due to extension (e.g., the Basin and Range Province of the Western United States and northwestern Mexico.</skos:definition>
+        <skos:prefLabel xml:lang="en">extended crust province</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Fault">
+        <skos:prefLabel xml:lang="en">fault</skos:prefLabel>
+        <skos:definition xml:lang="en">A discrete surface or zone of discrete surfaces separating two rock masses across which one mass has slid past the other. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/FaultScarp">
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:altLabel xml:lang="en">fault cliff</skos:altLabel>
+        <skos:altLabel xml:lang="en">fault escarpment</skos:altLabel>
+        <skos:definition xml:lang="en">(a) A steep slope or cliff formed directly by movement along a fault and representing the exposed surface of the fault before modification by erosion and weathering. It is an initial landform; (b) A term used loosely in England for any scarp that is due to the presence of a fault, even though the relief may be erosional. (Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">fault scarp</skos:prefLabel>
+        <skos:altLabel xml:lang="en">cliff of displacement</skos:altLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/FaultSet">
+        <skos:definition xml:lang="en">A group of faults that are parallel or nearly so, and that are related to a particular deformational episode. (Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">fault set</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/FaultSystem">
+        <skos:prefLabel xml:lang="en">fault system</skos:prefLabel>
+        <skos:definition xml:lang="en">(a) An array of interconnected and kinematically related faults; (b) Two or more geometrically related fault sets, e.g., a conjugate fault system. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/FaultZone">
+        <skos:prefLabel xml:lang="en">fault zone</skos:prefLabel>
+        <skos:definition xml:lang="en">A fault that is expressed as a zone of numerous small fractures, breccia, and/or fault gouge. A fault zone may be as wide as hundreds of meters. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Flow">
+        <skos:definition xml:lang="en">A discrete extrusive volcanic body distinguishable by texture, composition, or other objective criteria. (ICS, Online, December 2019)</skos:definition>
+        <skos:prefLabel xml:lang="en">flow</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Fold">
+        <skos:prefLabel xml:lang="en">fold</skos:prefLabel>
+        <skos:definition xml:lang="en">A curve or bend of a planar structure, such as rock strata, bedding planes, foliation or cleavage. A fold is usually the product of deformation, involving the compression of strata, but may include primary structures, as its definition is descriptive, not genetic. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/FoldBelt">
+        <dcterms:source rdf:resource="https://doi.org/10.1093/acref/9780199653065.001.0001"/>
+        <skos:altLabel xml:lang="en">fold and thrust belt</skos:altLabel>
+        <skos:prefLabel xml:lang="en">fold belt</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:altLabel xml:lang="en">folded zone</skos:altLabel>
+        <skos:definition xml:lang="en">A region in Earth’s lithosphere characterised by compressional tectonics, involving folding (usually parellel) and thrusting (both causing crustal shortening). Fold belts generally develop in the foreland bordering an ogogenic zone that was initiated by convergence between two tectonic plates or major crustal blocks. (Modified from: Neuendorf et al., 2011; Allaby, 2013 (Oxford Dictionary of Geology and Earth Sciences))</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Formation">
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <skos:definition xml:lang="en">The primary formal unit of lithostratigraphic classification. Formations are the only formal lithostratigraphic units into which the stratigraphic column everywhere should be divided completely on the basis of lithology. (ICS, Online, December 2019)</skos:definition>
+        <skos:prefLabel xml:lang="en">formation</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/GeoResourceAccumulation">
+        <skos:definition xml:lang="en">Georesource accumulations are naturally occurring masses, volumes or concentrations of geological materials that have existing or potential economic value. These resources may include, but are not limited to, minerals (including coal), hydrocarbons, quarry resources and groundwater.</skos:definition>
+        <dcterms:contributor rdf:resource="http://linked.data.gov.au/org/gsq"/>
+        <skos:prefLabel xml:lang="en">georesource accumulation</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/GeophysicalDomain">
+        <dcterms:source rdf:resource="http://pid.geoscience.gov.au/dataset/ga/14909"/>
+        <dcterms:source rdf:resource="https://doi.org/10.1016/j.tecto.2012.02.022"/>
+        <skos:prefLabel xml:lang="en">geophysical domain</skos:prefLabel>
+        <skos:definition xml:lang="en">Geophysical Domains are Geologic Features delimited by their geophysical properties, primarily magnetic and gravity properties or, in the case of Seismic Provinces, their crustal reflectivity. They represent discrete &quot;volumes&quot; of middle to lower crust. (Terminology based on usage of Shaw et al., 1996; Korsch et al., 2012)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/GeophysicalFeature">
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">A feature associated with, and interpreted from, the physical properties and processes of the Earth, e.g., seismology. (Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">geophysical feature</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Graben">
+        <skos:definition xml:lang="en">An elongate trough or basin, bounded on both sides by high-angle normal faults that dip toward one another. It is a structural form that may or may not be geomorphologically expressed as a rift valley. (Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">graben</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Group">
+        <skos:definition xml:lang="en">A succession of two or more contiguous or associated formations with significant and diagnostic lithologic properties in common. (ICS, Online, December 2019)</skos:definition>
+        <skos:prefLabel xml:lang="en">group</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/HalfGraben">
+        <skos:definition xml:lang="en">An elongate, asymmetric trough or basin bounded on one side by a normal fault. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:prefLabel xml:lang="en">half graben</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Horst">
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:prefLabel xml:lang="en">horst</skos:prefLabel>
+        <skos:definition xml:lang="en">An elongate block that is bounded on both sides by normal faults that dip away from one another. It is a structural form and may or may not be expressed geomorphologically. (Neuendorf et al., 2011)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/IgneousProvince">
+        <skos:definition xml:lang="en">A broad area in which similar igneous rocks are considered to have been formed during the same period of (igneous) activity. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:prefLabel xml:lang="en">igneous province</skos:prefLabel>
+        <skos:altLabel xml:lang="en">Petrographic province</skos:altLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Inlier">
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">An area or group of rocks surrounded by younger rocks, e.g., an eroded anticlinal crest. (Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">inlier</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/IntervalZone">
+        <skos:prefLabel xml:lang="en">interval zone</skos:prefLabel>
+        <skos:definition xml:lang="en">The body of fossiliferous strata between two specified biohorizons. (ICS, Online, December 2019)</skos:definition>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Klippe">
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">An isolated rock unit that is an erosional remnant or outlier of a nappe. Plural: klippen. (Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">klippe</skos:prefLabel>
+        <skos:altLabel xml:lang="en">thrust outlier</skos:altLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/LargeIgneousProvince">
+        <skos:prefLabel xml:lang="en">large igneous province</skos:prefLabel>
+        <skos:definition xml:lang="en">A region characterized by massive crustal emplacements of predominantly mafic (Mg- and Fe-rich) extrusive and intrusive rocks which originated through processes other than &quot;normal&quot; seafloor spreading (Coffin &amp; Eldholm, 1994); includes continental flood basalt provinces (e.g., Deccan Traps), oceanic plateaus (e.g., Ontong &amp; Java Oceanic Plateaus), and North Atlantic volcanic passive margins. Abbrev: LIP. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/LineageZone">
+        <skos:prefLabel xml:lang="en">lineage zone</skos:prefLabel>
+        <skos:definition xml:lang="en">The body of strata containing specimens representing a specific segment of an evolutionary lineage. (ICS, Online, December 2019)</skos:definition>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Lithodeme">
+        <skos:definition xml:lang="en">A lithodeme is the fundamental formal unit in lithodemic classification and corresponds to formation in lithostratigraphy. A lithodeme may consist of a single rock type, several rock types (if they form a lithologically coherent unit) or several rock types that have become tectonically intermingled to form a lithological unit. A lithodeme may contain informal sub-lithodemes, some of which may be named phase or zone (e.g., mineralized zone, pegmatitic zone). The term complex can be used for a non-ranked lithodemic unit. (Kumpulainen, 2017)</skos:definition>
+        <skos:prefLabel xml:lang="en">lithodeme</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/LithodemicFeature">
+        <dcterms:source rdf:resource="https://doi.org/10.1306/05230505015"/>
+        <skos:definition xml:lang="en">A Lithodemic Unit is a defined body of predominantly intrusive, highly metamorphosed, or intensely deformed rock that, because it is intrusive or has lost primary structure through metamorphism or tectonism, generally does not conform to the Law of Superposition. Expressions of age of lithodemic units (because they are non-stratigraphic) should be given in terms of the appropriate geochronologic (geological-time) unit, and thus not by chronstratigraphic (time-rock) terms. (North American Stratigraphic Code, 2005)</skos:definition>
+        <skos:prefLabel xml:lang="en">lithodemic feature</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/LithostratigraphicUnit">
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <skos:definition xml:lang="en">Lithostratigraphic units are bodies of rocks, bedded or unbedded, that are defined and characterized on the basis of their lithologic properties and their stratigraphic relations. Lithostratigraphic units are the basic units of geologic mapping. (ICS, Online, December 2019)</skos:definition>
+        <skos:prefLabel xml:lang="en">lithostratigraphic unit</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySubzone">
+        <skos:definition xml:lang="en">Polarity Zones may be subdivided into Polarity Suzones. The corresponding interval of geological time during which the rocks in the Polarity Subzone were deposited is referred to as its associated Polarity Subchron. (Salvador, 2013; ICS, Online, December, 2019)</skos:definition>
+        <skos:prefLabel xml:lang="en">magnetostratigraphic polarity subzone</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <dcterms:source rdf:resource="https://doi.org/10.1130/9780813774022"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolaritySuperzone">
+        <dcterms:source rdf:resource="https://doi.org/10.1130/9780813774022"/>
+        <skos:prefLabel xml:lang="en">magnetostratigraphic polarity superzone</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <dcterms:source rdf:resource="http://pid.geoscience.gov.au/dataset/ga/70149"/>
+        <skos:definition xml:lang="en">Polarity Zones may be grouped into Polarity Superzones (Hyperzones in Russian literature). The corresponding interval of geological time during which the rocks in the Polarity Superzone were deposited is referred to as its associated Polarity Superchron. As an example of the latter, the mid-Carboniferous – Middle Permian Kiaman Superchron is the longest known period of predominantly reversed polarity, which was terminated by the Illawarra Geomagnetic Polarity Reversal near the base of the Capitanian. (Salvador, 2013; ICS, Online, December, 2019; Gradstein et al., 2012)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicPolarityZone">
+        <skos:definition xml:lang="en">The basic formal unit in magnetostratigraphic polarity classification is the Magnetostratigraphic Polarity Zone (or Polarity Zone). The corresponding interval of geological time during which the rocks in the Polarity Zone were deposited is referred to as its associated Polarity Chron. (Salvador, 2013; ICS, Online, December, 2019)</skos:definition>
+        <dcterms:source rdf:resource="https://doi.org/10.1130/9780813774022"/>
+        <skos:prefLabel xml:lang="en">magnetostratigraphic polarity zone</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/MagnetostratigraphicUnit">
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <dcterms:source rdf:resource="https://doi.org/10.1130/9780813774022"/>
+        <skos:prefLabel xml:lang="en">magnetostratigraphic unit</skos:prefLabel>
+        <skos:definition xml:lang="en">A Magnetostratigraphic Unit (Magnetozone) is a body of rocks unified by similar magnetic characteristics which allow it to be differentiated from adjacent rock bodies.  The term is collectively applied to the different kinds of stratigraphic units that are identified by their measurable magnetic properties. (Salvador, 2013; ICS, Online, December, 2019)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Member">
+        <skos:prefLabel xml:lang="en">member</skos:prefLabel>
+        <skos:definition xml:lang="en">The formal lithostratigraphic unit next in rank below a formation. (ICS, Online, December 2019)</skos:definition>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/MineralProvince">
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:prefLabel xml:lang="en">mineral province</skos:prefLabel>
+        <skos:definition xml:lang="en">An area characterized by a particular assemblage of mineral deposits, or by one or more characteristic types of mineralization. A metallogenic province may have had more than one episode of mineralization.  (Neuendorf et al., 2011)</skos:definition>
+        <skos:altLabel xml:lang="en">Metallogenic province</skos:altLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Monocline">
+        <skos:prefLabel xml:lang="en">monocline</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1093/acref/9780199653065.001.0001"/>
+        <skos:definition xml:lang="en">A one-limbed flexure on either side of which the strata are horizontal or dip uniformly at low angles. (Allaby, 2013)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/MyloniteZone">
+        <skos:prefLabel xml:lang="en">mylonite zone</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">Usually found in narrow, planar zones of localised ductile deformation, although kilometre-scale zones exist. Mylonites form in shear zones by mechanical grinding, crushing and recrystallization of rock to produce a metamorphic rock that has foliation and is much finer grained than its precursor. (Modified from: Neuendorf et al., 2011; Allaby, 2013)</skos:definition>
+        <dcterms:source rdf:resource="https://doi.org/10.1093/acref/9780199653065.001.0001"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Nappe">
+        <dcterms:source rdf:resource="https://doi.org/10.1093/acref/9780199653065.001.0001"/>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">A sheetlike, allochthonous rock unit, which has moved on a predominantly horizontal surface as a result of thrust faulting, recumbent folding, or both. Fold limbs and axes are approximately horizontal (After Neuendorf et al., 2011; Allaby, 2013)</skos:definition>
+        <skos:prefLabel xml:lang="en">nappe</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/NappeComplex">
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+        <skos:definition xml:lang="en">A nappe complex consists of two or more distinct nappes that are stacked upon, and related to, one another in some significant respect, e.g., shared general environment of origin, similar metamorphism and/or deformation. (Kumpulainen, 2017)</skos:definition>
+        <skos:prefLabel xml:lang="en">nappe complex</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Orogen">
+        <skos:definition xml:lang="en">An orogen (orogenic system, orogenic zone, orogenic belt) is a region in Earth’s lithosphere where a mountain belt is created by tectonic processes involving deformation, regional metamorphism, and associated magmatism, usually caused by convergence (± accretion and/or collision) between two tectonic plates or major crustal blocks. (Alt obsolete term: geosyncline). (Modified from Neuendorf et al., 2011; Hoy, pers. comm.)</skos:definition>
+        <skos:prefLabel xml:lang="en">orogen</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/OrogenicCollage">
+        <skos:prefLabel xml:lang="en">orogenic collage</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1146/annurev-earth-082517-010146"/>
+        <skos:definition xml:lang="en">A patchwork-map pattern of accreted terranes, embracing a geotectonic assemblage of crustal blocks separated by major faults (Neuendorf et al., 2011). In eastern Australia, such a collage is represented by the Tasmanides, which is part of the larger-scale Terra Australis Orogen that developed along the southern Panthalassan (Paleo-Pacific) margin of Gondwana, and which comprises multiple metamorphic belts, fold-thrust belts, igneous provinces, and sedimentary basins that have been attributed to five Cambrian to Triassic subduction-related orogens: the Delamerian, Thomson, Lachlan, Mossman, and New England Orogens (Rosenbaum, 2018)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Outlier">
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:prefLabel xml:lang="en">outlier</skos:prefLabel>
+        <skos:definition xml:lang="en">An area or group of rocks surrounded by older rocks. (Neuendorf et al., 2011)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/OverturnedFold">
+        <skos:altLabel xml:lang="en">Overfold</skos:altLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1093/acref/9780199653065.001.0001"/>
+        <skos:altLabel xml:lang="en">Overfolded Zone</skos:altLabel>
+        <skos:prefLabel xml:lang="en">overturned fold</skos:prefLabel>
+        <skos:definition xml:lang="en">A zone where folds in their axial planes are inclined so that the fold limbs dip in the same direction, although not necessarily by the same amount. For each fold, one limb is thus ‘overturned&apos;. (Allaby, 2008)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/PedostratigraphicUnit">
+        <skos:prefLabel xml:lang="en">pedostratigraphic unit</skos:prefLabel>
+        <skos:definition xml:lang="en">A buried, traceable, three-dimensional body of rock (or sediment) that consists of one or more differentiated pedologic horizons developed in, and overlain by, one or more formally defined lithostratigraphic or allostratigraphic units. (NACSN, 2005; Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="https://doi.org/10.1306/05230505015"/>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Peneplain">
+        <dcterms:source rdf:resource="https://doi.org/10.1093/acref/9780199653065.001.0001"/>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:prefLabel xml:lang="en">peneplain</skos:prefLabel>
+        <skos:definition xml:lang="en">A low, nearly featureless, gently undulating land surface of considerable area, which has been produced by the processes of prolonged subaerial erosion almost to base level; it is the end product of a cycle of erosion. (Davis, 1889; Neuendorf et al., 2011; Allaby, 2013)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/PresentContinent">
+        <skos:scopeNote xml:lang="en">One of several landmasses on Earth. Up to eight identified depending on their various groupings, which are, in part, geopolitical and are not fully classified with strict criteria: Africa, North America, South America, Europe, Asia, Antarctica, Australia and Zealandia. Europe and Asia are commonly and collectively termed Eurasia, and North America and South America are commonly referred to as the Americas or the American Continent. Zealandia (the New Zealand Continent), in isolation from Australia following its breakup from eastern Gondwana during the Late Cretaceous, is now recognised as a geological continent, with submergence of 94% of its continental crust.</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">present continent</skos:prefLabel>
+        <skos:definition xml:lang="en">A large, existing landmass, comprising continental crust and embracing exposed land above sea level (Zealandia being an exception), and, below sea level, based on major differences in the inclination of the bathymetric surface, the attendant continental shelf, continental slope, and, if present, the continental rise. ((Modified and compiled from: Burke &amp; Drake, 1974, Sheriff, 2002; Mortimer et al., 2017; Wikipedia, March 2020)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/RangeZone">
+        <skos:definition xml:lang="en">The body of strata representing the known stratigraphic and geographic range of occurrence of a particular taxon or combination of two taxa of any rank. There are two principal types: taxon-range zones and concurrent-range zones. (ICS, Online, December 2019)</skos:definition>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <skos:prefLabel xml:lang="en">range zone</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Ridge">
+        <skos:prefLabel xml:lang="en">ridge</skos:prefLabel>
+        <dcterms:source rdf:resource="https://en.wikipedia.org/wiki/Ridge"/>
+        <skos:definition xml:lang="en">A ridge or a mountain ridge is a geographical feature consisting of a chain of mountains or hills that form a continuous elevated crest for some distance. The sides of the ridge slope away from narrow top on either side. The lines along the crest formed by the highest points, with the terrain dropping down on either sides, are called the ridgelines. Ridges are usually termed hills or mountains as well, depending on size. (Adapted from Wikipedia)</skos:definition>
+        <dcterms:contributor rdf:resource="http://linked.data.gov.au/org/gsq"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/SedimentaryBasin">
+        <skos:prefLabel xml:lang="en">sedimentary basin</skos:prefLabel>
+        <skos:definition xml:lang="en">A low area in the Earth’s crust, of tectonic origin, in which sediments accumulate. Sedimentary basins range in size from small continental basins to large oceanic basins. The essential element of the concept is tectonic creation of relief, to provide both a source of sediment and a relatively low place for the deposition of that sediment. (After Miall, 2000)</skos:definition>
+        <dcterms:source rdf:resource="https://doi.org/10.1007/978-3-662-03999-1"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/SeismicProvince">
+        <skos:prefLabel xml:lang="en">seismic province</skos:prefLabel>
+        <skos:definition xml:lang="en">Representative of a discrete &quot;volume&quot; of middle to lower crust which cannot be traced to the surface, and whose crustal reflectivity is different to that of laterally or vertically adjoining provinces (in differing lithology, geological history, and/or structural architecture). A Seismic Province it is a Geophysical Domain. In North Queensland, the Numil and Abingdon Seismic Provinces are two lower crustal sectors that have been interpreted to represent microcontinents that accreted to the eastern fringe of the North Australian Craton prior to the late Paleoproterozoic (Korsch et al., 2010, Korsch, 2012)</skos:definition>
+        <dcterms:source rdf:resource="http://pid.geoscience.gov.au/dataset/ga/70149"/>
+        <dcterms:source rdf:resource="https://doi.org/10.1016/j.tecto.2012.02.022"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/SequenceStratigraphicUnit">
+        <dcterms:source rdf:resource="https://doi.org/10.1127/0078-0421/2011/0011"/>
+        <skos:definition xml:lang="en">A Sequence Stratigraphic Unit is an extensive, depositional unit that may be bounded by subaerial unconformities and their correlative conformities, by transgressive surfaces or by surfaces of maximum marine flooding. It documents changes in relative sea level, which may have been the result of eustasy, regional or local tectonic movements, compaction, isostasy or the combination of two or more of these factors. (Kumpulainen, 2017; Catuneanu et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">sequence stratigraphic unit</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/ShearZone">
+        <dcterms:source rdf:resource="https://doi.org/10.1093/acref/9780199653065.001.0001"/>
+        <skos:definition xml:lang="en">A region, narrow compared to its length, within which rocks have undergone intense deformation: viz. brecciation. There are two end-members: brittle shear zones (faults), marked by a surface of rupture, which are a common feature of higher crustal levels; and ductile shear zones in which deformation is continuous and characterized by high ductile strain due to the rocks having formed under high temperatures and pressures at deeper crustal levels. Both brittle and ductile shear zones may occur as subparallel or conjugate sets. (after Allaby, 2013 (Oxford Dictionary of Geology and Earth Sciences))</skos:definition>
+        <skos:prefLabel xml:lang="en">shear zone</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Shield">
+        <skos:definition xml:lang="en">A large area of exposed basement rock in a craton, commonly with a very gently convex surface, surrounded by sediment covered platforms. The rocks of virtually all shield areas are Precambrian. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:prefLabel xml:lang="en">shield</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/StratigraphicEvent">
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+        <skos:prefLabel xml:lang="en">stratigraphic event</skos:prefLabel>
+        <skos:definition xml:lang="en">Stratigraphic Events reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (Kumpulainen, 2017)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/StratigraphicFeature">
+        <skos:prefLabel xml:lang="en">stratigraphic feature</skos:prefLabel>
+        <skos:definition xml:lang="en">Stratigraphic Features embrace Stratigraphic Units, which are units of rock and/or sediment that conform to the Law of Superposition (e.g. lithostratigraphic units, biostratigraphic units, chronostratigraphic units), and Stratigraphic Events which reflect physical, chemical and biological events that left identifiable, widespread, if not worldwide, traces or markers in the sedimentary or extrusive igneous record (ICS; Kumpulainen, R.A., 2016)</skos:definition>
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/StratigraphicUnit">
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <skos:prefLabel xml:lang="en">stratigraphic unit</skos:prefLabel>
+        <skos:definition xml:lang="en">Stratigraphic Units are units of rock and/or sediment that conform to the Law of Superposition (e.g., lithostratigraphic units, biostratigraphic units, chronostratigraphic units). (Murphy &amp; Salvador, 2000; ICS, Online, December, 2019)</skos:definition>
+        <dcterms:source rdf:resource="https://doi.org/10.1130/9780813774022"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/StructuralFeature">
+        <skos:prefLabel xml:lang="en">structural feature</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">A feature produced by deformation or displacement of rocks, such as a fold or fault. (Neuendorf et al., 2011)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Subbasin">
+        <dcterms:contributor rdf:resource="http://linked.data.gov.au/org/gsq"/>
+        <skos:altLabel xml:lang="en">Sub-basin</skos:altLabel>
+        <skos:prefLabel xml:lang="en">subbasin</skos:prefLabel>
+        <skos:definition xml:lang="en">A sedimentary basin may be subdivided into two or more subbasins that have separate depocentres and are separated from one another by some tectonic/structural element, such as a fault or basement high. (Definition created here: Paul Blake, John McKellar)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Subgroup">
+        <dcterms:contributor rdf:resource="http://linked.data.gov.au/org/gsq"/>
+        <skos:prefLabel xml:lang="en">subgroup</skos:prefLabel>
+        <skos:definition xml:lang="en">A Subgroup is a part of a Group. (Definition created here: Paul Blake, John McKellar)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Suite">
+        <skos:definition xml:lang="en">A Suite consists of two or more lithodemes that are genetically associated and have a common geological history. The individual lithodemes need not have identical (crystallization or depositional) ages but they should have similar ages and belong, for example, to the same phase of an orogeny. Also, they must be of the same lithological class, either intrusive or metamorphic. Two or more suites may form a Supersuite. (Kumpulainen, 2017)</skos:definition>
+        <skos:prefLabel xml:lang="en">suite</skos:prefLabel>
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Superbasin">
+        <skos:definition xml:lang="en">A superbasin is a hierarchial term applied to  a group of largely interconnected or associated sedimentary basins of the same or similar age. Its component basins may be separated or partially separated by tectonic elements that define &apos;boundaries&apos;  between them, or they may have been subjected to somewhat different geological influences. In the Australian Mesozoic, the Great Australian Superbasin, composed of the Nambour, Clarence-Moreton, Surat, Eromanga, Carpentaria and other basins, is a prime example, variously covering a geographically-extensive area in parts of Queensland, the Northern Territory, New South Wales and South Australia. (Definition created here)</skos:definition>
+        <dcterms:contributor rdf:resource="http://linked.data.gov.au/org/gsq"/>
+        <skos:prefLabel xml:lang="en">superbasin</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Supercontinent">
+        <skos:prefLabel xml:lang="en">supercontinent</skos:prefLabel>
+        <dcterms:source rdf:resource="http://doi.org/10.22459/SN.08.2012"/>
+        <skos:definition xml:lang="en">A large continent formed by the amalgamation of most or all of Earth’s continental landmasses. (Blewett, 2012)
+
+Due to mantle convection and heat anomalies that build up slowly below the mantle-insulating continental lithosphere (relative to the less insulating oceanic lithosphere), continents go through a prolonged cycle (Wilson Cycle) of formation into a supercontinent which subsequently breaks up into continents again. Continents after breakup are generally not the same as those before.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Supergroup">
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <skos:prefLabel xml:lang="en">supergroup</skos:prefLabel>
+        <skos:definition xml:lang="en">A lithostratigraphic Supergroup may contain several associated groups or associated groups and formations, all with significant lithologic properties in common. (ICS, Online, December 2019)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Supersuite">
+        <skos:definition xml:lang="en">A supersuite is composed of two or more suites that are genetically associated, i.e., belong to the same class, and have at least partly a common geological history, e.g., the same orogenic phase. A supersuite is defined according to its lithodemic members and may be named after a type area, its geographical distribution and/or its lithological properties. (Kumpulainen, 2017)</skos:definition>
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+        <skos:prefLabel xml:lang="en">supersuite</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Syncline">
+        <skos:prefLabel xml:lang="en">syncline</skos:prefLabel>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">A fold of which the core contains the stratigraphically younger rocks; it is generally concave upward. (Neuendorf et al., 2011)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Synclinorium">
+        <skos:prefLabel xml:lang="en">synclinorium</skos:prefLabel>
+        <skos:definition xml:lang="en">A composite synclinal structure of regional extent composed of lesser folds. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Synform">
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">Any fold whose limbs close at the bottom. The term is usually used when the folded layers do not possess a stratigraphic order, when the stratigraphic order of the folded layers is not known, or when the fold core also contains the stratigraphically older rock. (Neuendorf et al., 2011)</skos:definition>
+        <skos:prefLabel xml:lang="en">synform</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/TaxonRangeZone">
+        <dcterms:source rdf:resource="http://www.stratigraphy.org/index.php/ics-stratigraphicguide"/>
+        <skos:definition xml:lang="en">The body of strata representing the known range of stratigraphic and geographic occurrence of specimens of a particular taxon. (ICS, Online, December 2019)</skos:definition>
+        <skos:prefLabel xml:lang="en">taxon range zone</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/TectonicEntity">
+        <skos:scopeNote xml:lang="en">The current definition does not explain what gives rise to a tectonic entity. This should be added.</skos:scopeNote>
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+        <skos:prefLabel xml:lang="en">tectonic entity</skos:prefLabel>
+        <skos:definition xml:lang="en">Tectonic Entitities include the lithosphere, continental and oceanic crust, tectonic plates (that the lithosphere is subdivided into), mid-ocean ridges, orogens, subduction zones, volcanic arcs, continents, cratons/shields, extended crust provinces, tectonised and or metamorphosed provinces, metallogenic (mineral) provinces, igneous provinces (including large igneous provinces), and sedimentary basins. (Modified from Kumpulainen, 2017)</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/TectonicFeature">
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+        <skos:definition xml:lang="en">Tectonic Features include Tectonic Entities and Tectonostratigraphic Entities. The former encompass Geological Provinces (e.g., cratons/shields, orogens, sedimentary basins, igneous/petrographic provinces, etc.), and the latter, tectonostratigraphic units, such as nappes and terranes. (Modified from Kumpulainen, 2017). Collectively, they constitute continents, past and present, and, when previously formed, supercontinents</skos:definition>
+        <skos:prefLabel xml:lang="en">tectonic feature</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/TectonicPlate">
+        <dcterms:source rdf:resource="https://pubs.usgs.gov/gip/dynamic/tectonic.html"/>
+        <skos:prefLabel xml:lang="en">tectonic plate</skos:prefLabel>
+        <skos:altLabel xml:lang="en">lithospheric plate</skos:altLabel>
+        <skos:altLabel xml:lang="en">plate</skos:altLabel>
+        <skos:definition xml:lang="en">The lithosphere is divided into a number of discrete tectonic plates each of which has motion relative to other plates. 
+
+Tectonic plates vary significantly in size and thickness, with boundaries marked by seismic and volcanic activity. They move slowly relative to one another due to convection currents in the Upper Mantle, and may slide on a boundary with another along transform faults. A tectonic plate comprising oceanic lithosphere (entirely or partly thereof), can sink/subduct in a subduction zone below another, usually a lighter, continental plate. Along mid-ocean ridges and major rifts, tectonic plates separate and new crust is formed by the upwelling of basaltic magma.(Adapted from Sheriff, 2002; USGS, 1999).</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/TectonisedMetomorphosedProvince">
+        <skos:definition xml:lang="en">A Tectonised and/or Metamorphosed Province is generally an old sedimentary basin that has been strongly tectonised and/or metamorphosed, so that its original basin extent and form are no longer preserved. Such provinces may have associated magmatism and metallogenesis. (Definition created here)</skos:definition>
+        <dcterms:contributor rdf:resource="http://linked.data.gov.au/org/gsq"/>
+        <skos:prefLabel xml:lang="en">tectonised metomorphosed province</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Terrane">
+        <skos:definition xml:lang="en">A fault-bounded body of rock of regional extent, characterised by a geologic history different from that of contiguous terranes or bounding continents. A terrane is generally considered to be a discrete allochthonous fragment of oceanic or continental material added to a craton (or continental plate) at an active margin by accretion. (After  Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:prefLabel xml:lang="en">terrane</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Trough">
+        <skos:definition xml:lang="en">A trough (in the continental realm) is an elongate region of the lithosphere that has undergone subsidence because of faulting along one or both of its elongate margins, permitting the accumulation of sediments and the subsequent formation of sedimentary rocks. Troughs are generally grabens or half-grabens, sometimes associated with initial magmatism, that have formed under extensional or transtensional tectonic conditions and may be part of, or associated with, the formation, and subsequent evolution, of larger sedimentary-basin/rifting systems or basin-and-range (western-North-America) type settings. (Definition created here)</skos:definition>
+        <dcterms:contributor rdf:resource="http://linked.data.gov.au/org/gsq"/>
+        <skos:prefLabel xml:lang="en">trough</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Unconformity">
+        <dcterms:source rdf:resource="https://doi.org/10.1093/acref/9780199653065.001.0001"/>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:definition xml:lang="en">The surface of contact between rock strata that represents a lack of continuity in deposition, encompassing a period of nondeposition or weathering/erosion prior to the deposition of younger rocks, sometimes, in the case of sedimentary rocks, marked by the absence of conformity between the dip and strike of underlying and overlying strata. (Modified from Neuendorf et al., 2011; Allaby, 2013)</skos:definition>
+        <skos:prefLabel xml:lang="en">unconformity</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/Window">
+        <skos:prefLabel xml:lang="en">window</skos:prefLabel>
+        <skos:definition xml:lang="en">An eroded area of a thrust sheet or nappe that displays the rocks beneath the thrust sheet. (Neuendorf et al., 2011)</skos:definition>
+        <dcterms:source rdf:resource="http://www.glossaryofgeology.org"/>
+        <skos:altLabel xml:lang="en">fenster</skos:altLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/def/geofeatures/tectonostratigraphicEntity">
+        <dcterms:source rdf:resource="https://doi.org/10.1080/11035897.2016.1178666"/>
+        <skos:prefLabel xml:lang="en">tectonostratigraphic entity</skos:prefLabel>
+        <skos:definition xml:lang="en">Tectonostratigraphic Entities/Units, separately distinguished from Tectonic Entities/Units (following Kumpulainen, 2017), encompass generally flat-lying, scale-independent, tectonic units that are bounded by zones of high strain (ductile shear zone, deformation zone or belt, fault, fault zone, etc.). They include tectonically-displaced allochthonous sheets that are represented by nappes (thrust sheets) and nappe complexes, as well as accreted terranes</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://linked.data.gov.au/org/ga">
+        <sdo:url rdf:resource="https://www.ga.gov.au"/>
+        <sdo:name>Geoscience Australia</sdo:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://sweetontology.net/realmGeol/GeologicFeature">
+        <skos:scopeNote xml:lang="en">Geologic Features include sedimentary basins, stratigraphic units, non-stratigraphic (lithodemic) units, stratigraphic event features, provinces, tectonic and structural features, georesource accumulations, and geologically significant sites, among others</skos:scopeNote>
+        <skos:example xml:lang="en">Individuals: Lake Eyre Basin, Sarmatian Craton, Victoria Point Sandbar, Mount Erebus Volcano. Subclasses: Basin, Craton, Shield, Province, Sub-Province</skos:example>
+        <skos:altLabel xml:lang="en">Geological Feature</skos:altLabel>
+        <skos:prefLabel xml:lang="en">geologic feature</skos:prefLabel>
+        <skos:definition xml:lang="en">A geologic feature is a conceptual feature a that is hypothesized to exist coherently in the Earth that results from geological processes</skos:definition>
+        <skos:altLabel xml:lang="en">Geologic Feature</skos:altLabel>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,1504 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#"
+     xml:base="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation"
+     xmlns:geo="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation">
+        <rdfs:comment>Ali Alperen Çolak
+GeoOntology
+Bozcaada</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#crosses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#crosses">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hasLocationData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hasLocationData">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#datum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#overlaps -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#overlaps">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#touches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#touches">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#wikipediaArticle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#wikipediaArticle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#wikipediaArticle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BeachFlag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BeachFlag">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#area -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#area">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#island"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hasStar -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hasStar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#latlong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#latlong -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#latlong">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#verticalDatum"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#latlong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#population -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#population">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#postalCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#postalCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#administrativeRegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#administrativeRegion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#agriculturalRegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#agriculturalRegion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#formalRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#area">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#atm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#atm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bank"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#axis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#axis"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bank">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#barracks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#barracks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#administrativeRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coastalLandForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#boundingBox -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#boundingBox"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bridge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bridge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#humanMadeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#businessCenter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#businessCenter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#functionalRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#cafeeHouse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#cafeeHouse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#cartesianCS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#cartesianCS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coordinateSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#castle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#castle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#church -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#church">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coastal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coastal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#humanMadeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coastalLandForm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coastalLandForm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#landForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#compoundCRS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#compoundCRS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coordinateReferenceSystem"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#primaryCRS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#continent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#continent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#landForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coordinateReferenceSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coordinateReferenceSystem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coordinateSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coordinateSystem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#datum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#datum"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#department">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#administrativeRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#drainageBasin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#drainageBasin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#functionalArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#elipsoidalCS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#elipsoidalCS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coordinateSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ellipsoid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ellipsoid"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#factory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#factory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#falez -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#falez">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coastalLandForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#farm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#farm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#agriculturalRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#forest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#forest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#landForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#formalArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#formalArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#formalRegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#formalRegion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#functionalArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#functionalArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#area"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#functionalRegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#functionalRegion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#garden -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#garden">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#agriculturalRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#geocentricCRS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#geocentricCRS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#primaryCRS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#geodeticDatum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#geodeticDatum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#datum"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#verticalDatum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#governorsOffice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#governorsOffice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#administrativeRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#graveyard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#graveyard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#landForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#holidayVillage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#holidayVillage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hospital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hospital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#humanMadeStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#humanMadeStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#physicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#island -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#island">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#landForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#lake -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#lake">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#landForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#landForm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#landForm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#naturalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#library -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#library">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#mosque -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#mosque">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#mountain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#mountain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#landForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#municipality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#municipality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#administrativeRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#naturalFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#naturalFeature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#physicalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ocean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ocean">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#naturalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#physicalFeature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#physicalFeature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#pier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#pier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coastal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#policeStation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#policeStation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#administrativeRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#pool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#pool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#port -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#port">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coastal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#postOffice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#postOffice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#primaryCRS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#primaryCRS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coordinateReferenceSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#projectedCRS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#projectedCRS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#primaryCRS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#road -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#road">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#humanMadeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#sandArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#sandArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#formalArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#school -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#school">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#sea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#sea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#naturalFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#square -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#square">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#verticalCRS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#verticalCRS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#primaryCRS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#verticalCS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#verticalCS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#coordinateSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#verticalDatum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#verticalDatum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#datum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#vineYard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#vineYard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#humanMadeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#vineyard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#vineyard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#agriculturalRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#wikipediaArticle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#wikipediaArticle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#wineFactory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#wineFactory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#factory"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#AlaybeyCamii -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#AlaybeyCamii">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#mosque"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.834109</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.070755</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#AralTatilÇiftliği -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#AralTatilÇiftliği">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#holidayVillage"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.812866</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.067563</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Asma6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Asma6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.833921</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.072193</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asma6 Restaurant</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#AtatürkIlkOkulu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#AtatürkIlkOkulu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#school"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.835551</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.071241</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#AthenaOtel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#AthenaOtel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.836536</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.069474</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Athena Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#AyazmaPlajı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#AyazmaPlajı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach"/>
+        <BeachFlag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mavi</BeachFlag>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.81294</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.007803</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ayazma Plajı</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BattıBalık -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BattıBalık">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.835708</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.07022</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battı Balık Restaurant</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BeylikPlajı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BeylikPlajı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach"/>
+        <BeachFlag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mavi</BeachFlag>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.808342</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.021425</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beylik Plajı</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Boruzan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Boruzan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.833847</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.072778</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boruzan Restaurant</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Bozcaada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Bozcaada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#island"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Tenedos"/>
+        <area rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37.6 km²</area>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.823628</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.035677</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bozcaada</name>
+        <population rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2643</population>
+        <postalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">17600</postalCode>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tenedos veya Bozcaada, Ege Denizi&apos;nin kuzeydoğu kesiminde bulunan bir adadır. İdari olarak, ada Çanakkale ilinin Bozcaada ilçesini oluşturmaktadır.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BozcaadaKalesi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BozcaadaKalesi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#castle"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.835167</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.072542</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BozcaadaOtel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BozcaadaOtel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <hasStar rdf:datatype="http://www.w3.org/2001/XMLSchema#short">5</hasStar>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.836878</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.069766</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bozcaada Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BozcaadaSağlıkMerkezi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#BozcaadaSağlıkMerkezi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hospital"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.833773</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.068077</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#CabalıMeyhane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#CabalıMeyhane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bar"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.836992</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.070218</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#CorvusVineyards -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#CorvusVineyards">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#vineYard"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.805417</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.076905</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#CumhuriyetMeydanı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#CumhuriyetMeydanı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#square"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.071058</latitude>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.835198</latitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#EflatunOtel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#EflatunOtel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <hasStar rdf:datatype="http://www.w3.org/2001/XMLSchema#short">5</hasStar>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.83437</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.068598</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eflatun Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#EskiKale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#EskiKale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#castle"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.836266</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.061806</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#EşekAdası -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#EşekAdası">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#island"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#FaunaRestaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#FaunaRestaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.836315</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.070176</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fauna Restaurant</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#FuskaCafee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#FuskaCafee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#cafeeHouse"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.837422</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.069662</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Göztepe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Göztepe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hill"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.837904</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.057985</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Göztepe</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#GüverteRestaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#GüverteRestaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.835426</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.070134</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Güverte Restaurant</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#HabbelePlajı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#HabbelePlajı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#MitosPlajı"/>
+        <BeachFlag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mavi</BeachFlag>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.822105</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.993455</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HabbelePlajı</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#HeraButikOtel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#HeraButikOtel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <hasStar rdf:datatype="http://www.w3.org/2001/XMLSchema#short">5</hasStar>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.835196</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.068985</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hera Butik Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#HristiyanMezarlığı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#HristiyanMezarlığı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#graveyard"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.829653</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.065666</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#IgdelikPlajı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#IgdelikPlajı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach"/>
+        <BeachFlag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mavi</BeachFlag>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.828911</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.074586</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">İğdelik</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Iskele -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Iskele">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#port"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.834614</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.072641</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BozcaadaFeribot İskelesi</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#KaikiasOtel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#KaikiasOtel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <hasStar rdf:datatype="http://www.w3.org/2001/XMLSchema#short">5</hasStar>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.836528</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.070233</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaikias Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#KalindaOtel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#KalindaOtel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <hasStar rdf:datatype="http://www.w3.org/2001/XMLSchema#short">5</hasStar>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.834279</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.068322</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kalinda Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#KorelininYeri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#KorelininYeri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.812847</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.009012</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korelinin Yeri Restaurant</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#KöprülüCamii -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#KöprülüCamii">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#mosque"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.83354</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.071947</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Köprülü Mehmet Paşa Camii</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#MaviBeyaz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#MaviBeyaz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bar"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.833842</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.072463</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mavi Beyaz Bar</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#MeryemAnaKilisesi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#MeryemAnaKilisesi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#church"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.83532</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.068897</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meryem Ana Kilisesi</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#MitosPlajı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#MitosPlajı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#MuslumanMezarlıgı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#MuslumanMezarlıgı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#graveyard"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.830489</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.068954</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mezarlık</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#PelagosOtel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#PelagosOtel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <hasStar rdf:datatype="http://www.w3.org/2001/XMLSchema#short">5</hasStar>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.828725</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.074878</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pelagos Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#PoyrazPlajı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#PoyrazPlajı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach"/>
+        <BeachFlag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mavi</BeachFlag>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.818924</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.073728</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poyraz liman plajı</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Ptt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Ptt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#postOffice"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.835392</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.070857</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Postane</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#RengiGülKonukEvi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#RengiGülKonukEvi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <hasStar rdf:datatype="http://www.w3.org/2001/XMLSchema#short">5</hasStar>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.835511</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.069849</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RengiGül Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Salhane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Salhane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bar"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.83822</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.069874</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salhane Bar</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#SardunyaOtel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#SardunyaOtel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <hasStar rdf:datatype="http://www.w3.org/2001/XMLSchema#short">5</hasStar>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.834129</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.067493</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sardunya Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#SiestaOtel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#SiestaOtel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <hasStar rdf:datatype="http://www.w3.org/2001/XMLSchema#short">5</hasStar>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.816298</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.073384</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siesta Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#SulubahcePlajı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#SulubahcePlajı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach"/>
+        <BeachFlag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mavi</BeachFlag>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.816674</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.004334</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sulubahçe Plajı</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#TavşanAdası -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#TavşanAdası">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#island"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tavşan Adası</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Tenedos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Tenedos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#island"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tenedos or Bozcaada is an island of Turkey in the northeastern part of the Aegean Sea. Administratively, the island constitutes the Bozcaada district of Çanakkale province</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ThenesOtel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ThenesOtel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#hotel"/>
+        <hasStar rdf:datatype="http://www.w3.org/2001/XMLSchema#short">5</hasStar>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.828956</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.074551</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thenes Otel</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#VahitinYeri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#VahitinYeri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.813544</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.006455</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vahitin Yeri Restaurant</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#YakamozBalık -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#YakamozBalık">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.833542</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.07278</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yakamoz Balık Restaurant</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Yalova1940 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Yalova1940">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.83593</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.069784</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yalova1940 Restaurant</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#YosunRestaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#YosunRestaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.83401</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.072115</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yosun Restaurant</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Yunatçılar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#Yunatçılar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#wineFactory"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.834475</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.069334</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yunatçılar Şarap</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ZiraatBankası -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ZiraatBankası">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bank"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.835017</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.070697</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ziraat Bankası Bozcaada Şubesi</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#isBankATM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#isBankATM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#atm"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.834914</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.07062</longitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ziraatATM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ziraatATM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#atm"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.83505</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.070757</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ziraat Bankası ATM</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ÇamOrmanı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ÇamOrmanı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#forest"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.824449</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.01768</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bozcaada Çam Ormanı</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ÇaprazTatilKöyü -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ÇaprazTatilKöyü">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#holidayVillage"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.812734</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.072294</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Çapraz Tatil Köyü</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ÇayırPlajı -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ÇayırPlajı">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#beach"/>
+        <BeachFlag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mavi</BeachFlag>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.843235</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.031507</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Çayır Plajı</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ÇiçekPastanesi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#ÇiçekPastanesi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#restaurant"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.833994</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double">26.071353</longitude>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Çiçek Pastanesi</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#bridge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#castle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#church"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#graveyard"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#mosque"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#cartesianCS"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#elipsoidalCS"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/alperen/ontologies/2016/11/geolocation#verticalCS"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

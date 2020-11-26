@@ -10,6 +10,8 @@ from spacy.matcher import Matcher
 from spacy.tokens import Span 
 import os
 import csv
+import networkx as nx
+import matplotlib.pyplot as plt
 nlp = spacy.load('en_core_web_sm')
 source_file = r"D:\OSDU\Unstructured_Data\text_files_extracted_from_pdf\prov22.txt"
 csv_path = r'D:\OSDU\Unstructured_Data\triples_csv'
@@ -102,11 +104,29 @@ for sent in sents:
     triples = get_entities(str(sent))
     relations = get_relation(str(sent))
     triples_dict = {}
-    triples_dict['subject'] = triples['subject']
-    triples_dict['object'] = triples['object']
-    triples_dict['relationship'] = relations
-    entities.append (triples_dict)
-print(entities)
+    if triples["subject"] != "" and  triples["object"] != "" and relations != "":
+        triples_dict['subject'] = triples['subject']
+        triples_dict['object'] = triples['object']
+        triples_dict['relationship'] = relations
+        entities.append (triples_dict)
+
+def printGraph(triples):
+    G = nx.Graph()
+    for triple in triples:
+        G.add_node(triple["subject"])
+        G.add_node(triple["object"])
+        G.add_node(triple["relationship"])
+        G.add_edge(triple["subject"], triple["relationship"])
+        G.add_edge(triple["relationship"], triple["object"])
+    pos = nx.spring_layout(G)
+    plt.figure(figsize=(12, 8))
+    nx.draw(G, pos, edge_color='black', width=1, linewidths=1,
+            node_size=500, node_color='skyblue', alpha=0.9,
+            labels={node: node for node in G.nodes()})
+    plt.axis('off')
+    plt.show()
+#print(entities)
+printGraph(entities)
 filename = os.path.basename (source_file)
 filename = os.path.splitext(filename)[0] + ".csv"
 generate_csv_file(filename,csv_path,csv_columns, entities )  
