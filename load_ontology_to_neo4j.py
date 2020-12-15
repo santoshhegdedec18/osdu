@@ -14,7 +14,7 @@ Created on Fri Oct  2 21:09:15 2020
 # import the neo4j driver for Python
 #uri             = "bolt://20.185.241.225:7687"
 from neo4j import GraphDatabase
-uri = "neo4j://40.117.46.5:7687"
+uri = "neo4j://52.252.109.25:7687"
 driver = GraphDatabase.driver(uri, auth=("neo4j", "admin"))
 
 def get_friends_of(tx):
@@ -48,7 +48,7 @@ def create_constraint(tx):
     
 def import_ontology(tx):
     #import Ontology using neosemantics plugin
-    result = tx.run("CALL n10s.rdf.import.fetch('file:///home/osdugraph/datashare/osdu_ontology_rdf.owl','RDF/XML')")
+    result = tx.run("CALL n10s.rdf.import.fetch('file:///home/graphuser/osdu_vocab_rdf.owl','RDF/XML')")
     print("Imported the Ontology...........\n")
     for record in result:
        print(record)

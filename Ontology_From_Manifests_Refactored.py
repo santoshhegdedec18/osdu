@@ -30,19 +30,19 @@ well_log_file.close()
 #Load Ontology .owl file through file URI, the method can also create a new file if not exists already
 #Create base class to connect all WELL objects using owlready package
 
-uri = r"http://ontology.osdu.com/osdu_x.owl" 
+uri = r"http://osdu_vocab" 
 
 
 osdu_onto = get_ontology(uri)
 
 
-class WELL(Thing):
+class Well(Thing):
     ontology = osdu_onto
     
-class WELLBORE(WELL):
+class Wellbore(Well):
     ontology = osdu_onto
     
-class WELL_LOG(WELLBORE):
+class Well_Log(Wellbore):
     ontology = osdu_onto
 
 #my_ind = WELL("well_500")  
@@ -99,7 +99,7 @@ def handle_dictionary_object(dic, ontoclass):
 # Method is called to create annotation properties and assign to the parent class recursively 
 def handle_single_dictionary_element(key, value, ontoclass):
     if key not in props_tobe_ignored:
-        annot_prop=types.new_class(key.upper(),(AnnotationProperty,),kwds=None)
+        annot_prop=types.new_class(key,(AnnotationProperty,),kwds=None)
         ANNOTATIONS[ontoclass].add_annotation(annot_prop,value)
         annot_label=types.new_class("label",(AnnotationProperty,),kwds=None)
         ANNOTATIONS[ontoclass].add_annotation(annot_label,key.replace('ID',''))
@@ -108,7 +108,7 @@ def handle_single_dictionary_element(key, value, ontoclass):
 def handle_list_object(key, lst, ontoclass):
     for item in lst:
         if isinstance(item,list):
-            class_lst = types.new_class(key.upper(),(ontoclass,),kwds=None)
+            class_lst = types.new_class(key,(ontoclass,),kwds=None)
             annot_prop=types.new_class("label",(AnnotationProperty,),kwds=None)
             ANNOTATIONS[class_lst].add_annotation(annot_prop,item.replace('ID',''))
         else:
@@ -118,7 +118,7 @@ def handle_list_object(key, lst, ontoclass):
 # Method called to create sub class for the group headers whenever required
 def handle_group_headers(key, ontoclass):
     if key not in headers_tobe_ignored:
-        class_obj = types.new_class(key.upper(),(ontoclass,),kwds=None)
+        class_obj = types.new_class(key,(ontoclass,),kwds=None)
         annot_prop=types.new_class("label",(AnnotationProperty,),kwds=None)
         ANNOTATIONS[class_obj ].add_annotation(annot_prop,key.replace('ID',''))
         osdu_onto.add(class_obj)
@@ -129,10 +129,10 @@ def handle_group_headers(key, ontoclass):
     return ontoclass
 
 
-create_well_annotations(osdu_onto.WELL) 
-create_wellbore_annotations(osdu_onto.WELLBORE)
-create_well_log_annotations(osdu_onto.WELL_LOG)
-osdu_onto.save('D:/OSDU/Ontology/osdu_x.owl')
+create_well_annotations(osdu_onto.Well) 
+create_wellbore_annotations(osdu_onto.Wellbore)
+create_well_log_annotations(osdu_onto.Well_Log)
+osdu_onto.save('D:/OSDU/Ontology/Wells_Ontology_rdf.owl')
 
 
 
